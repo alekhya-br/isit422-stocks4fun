@@ -1,0 +1,8 @@
+$colors: (
+    primary: purple,
+    secondary: green
+);
+
+body {
+    background-color: map-get($colors, primary);
+}
