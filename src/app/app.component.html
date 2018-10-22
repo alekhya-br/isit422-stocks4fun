@@ -2,14 +2,16 @@
   <section class="navigation">
     <div class="nav-container">
       <div class="brand">
-        <a href="#!">Stocks4Fun</a>
+        <a routerLink="/home"
+          routerLinkActive="active">Stocks4Fun</a>
       </div>
       <nav>
         <div class="nav-mobile">
-          <a id="nav-toggle" href="#!"><span></span></a>
+          <a id="nav-toggle"><span></span></a>
         </div>
         <ul class="nav-list">
-          <li><a href="#!">Home</a></li>
+          <li><a routerLink="/home"
+            routerLinkActive="active">Home</a></li>
           <li><a href="#!">About</a></li>
           <li><a href="#!">Services</a>
             <ul class="nav-dropdown">
@@ -22,4 +24,4 @@
       </nav>
     </div>
   </section>
-<app-homepage></app-homepage>
+<router-outlet></router-outlet>
