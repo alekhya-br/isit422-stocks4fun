@@ -9,6 +9,7 @@ import { AboutComponent } from './about/about.component';
 import { QuotesearchComponent } from './quotesearch/quotesearch.component';
 import { MarketperformanceComponent } from './marketperformance/marketperformance.component';
 import { LoginComponent } from './login/login.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomepageComponent },
@@ -16,6 +17,7 @@ const appRoutes: Routes = [
   { path: 'quotesearch', component: QuotesearchComponent},
   { path: 'marketperformance', component: MarketperformanceComponent},
   { path: 'login', component: LoginComponent},
+  { path: 'sign_up', component: SignUpComponent},
   { path: '',
     redirectTo: '/home',
     pathMatch: 'full'
@@ -31,7 +33,8 @@ const appRoutes: Routes = [
     AboutComponent,
     QuotesearchComponent,
     MarketperformanceComponent,
-    LoginComponent
+    LoginComponent,
+    SignUpComponent
   ],
   imports: [
     RouterModule.forRoot(
