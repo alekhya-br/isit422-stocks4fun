@@ -1,27 +1,46 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Component } from '@angular/core';
+import { Router, Params } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../core/auth.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
   loginForm: FormGroup;
-  loading = false;
-  submitted = false;
-  returnUrl: string;
+  errorMessage: string = '';
 
   constructor(
     private formBuilder: FormBuilder,
-    private route: ActivatedRoute,
-    private router: Router) {}
+    private authService: AuthService,
+    private router: Router
+  ) {
+    this.createForm();
+  }
 
-  ngOnInit() {
+  createForm() {
     this.loginForm = this.formBuilder.group({
-      username: ['', Validators.required],
+      email: ['', Validators.required],
       password: ['', Validators.required]
-  });
-    }
+    });
+  }
+
+  tryGoogleLogin() {
+    this.authService.doGoogleLogin()
+      .then(res => {
+        this.router.navigate(['/user']);
+      })
+  }
+
+  tryLogin(value) {
+    this.authService.doLogin(value)
+      .then(res => {
+        this.router.navigate(['/user']);
+      }, err => {
+        console.log(err);
+        this.errorMessage = err.errorMessage;
+      })
+  }
 }

@@ -1,0 +1,24 @@
+{
+  "name": "isit422-stocks4fun-sprint3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd client && ng serve --open",
+    "server": "cd server && npm start",
+    "start": "concurrently \"npm run client\" \"npm run server\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alekhya-br/isit422-stocks4fun.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alekhya-br/isit422-stocks4fun/issues"
+  },
+  "homepage": "https://github.com/alekhya-br/isit422-stocks4fun#readme",
+  "dependencies": {
+    "concurrently": "^4.0.1"
+  }
+}

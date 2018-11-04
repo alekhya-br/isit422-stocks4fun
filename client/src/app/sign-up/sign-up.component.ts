@@ -1,39 +1,51 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
+import { Router, Params } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../core/auth.service';
 
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.scss']
 })
-export class SignUpComponent implements OnInit {
+export class SignUpComponent {
   registerForm: FormGroup;
-  loading = false;
-  submitted = false;
+  errorMessage: string = '';
+  successMessage: string = '';
+
   constructor(
+    public authService: AuthService,
     private formBuilder: FormBuilder,
     private router: Router
-  ) { }
+  ) {
+    this.createForm();
+  }
 
-  ngOnInit() {
+  createForm() {
     this.registerForm = this.formBuilder.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      username: ['', Validators.required],
-      password: ['', [Validators.required, Validators.minLength(6)]]
-  });
-  } 
-  get f() { return this.registerForm.controls; }
+      email: ['', Validators.required],
+      password: ['', Validators.required]
+    });
+  }
 
-    onSubmit() {
-        this.submitted = true;
+  tryGoogleLogin() {
+    this.authService.doGoogleLogin()
+      .then(res => {
+        this.router.navigate(['/user']);
+      }, err => console.log(err)
+      )
+  }
 
-        // stop here if form is invalid
-        if (this.registerForm.invalid) {
-            return;
-        }
-
-    this.loading = true; 
-}
+  tryRegister(value) {
+    this.authService.doRegister(value)
+      .then(res => {
+        console.log(res);
+        this.errorMessage = "";
+        this.successMessage = "Your account has been created!";
+      }, err => {
+        console.log(err);
+        this.errorMessage = err.message;
+        this.successMessage = "";
+      })
+  }
 }

@@ -1,33 +1,50 @@
 <!--The content below is only a placeholder and can be replaced.-->
-  <section class="navigation">
-    <div class="nav-container">
-      <div class="brand">
-        <a routerLink="/home"
-          routerLinkActive="active">Stocks4Fun</a>
-      </div>
-      <nav>
-        <div class="nav-mobile">
-          <a id="nav-toggle"><span></span></a>
-        </div>
-        <ul class="nav-list">
-          <li><a routerLink="/home"
-            routerLinkActive="active">Home</a></li>
-          <li><a routerLink="/about"
-              routerLinkActive="active">About</a></li>           
-          <li><a>Services</a>
-            <ul class="nav-dropdown">
-              <li><a routerLink="/quotesearch"
-                routerLinkActive="active">Quote Search</a></li>
-              <li><a routerLink="/marketperformance"
-                routerLinkActive="active">Market Performance</a></li>
-            </ul>
-          </li>
-          <li><a routerLink="/login"
-            routerLinkActive="active">Login/Signup</a></li>
-          <li><a routerLink="/crud"
-              routerLinkActive="active">CRUD</a></li>
-        </ul>
-      </nav>
+<section class="navigation">
+  <div class="nav-container">
+    <div class="brand">
+      <a routerLink="/home" routerLinkActive="active">Stocks4Fun</a>
     </div>
-  </section>
+    <nav>
+      <div class="nav-mobile">
+        <a id="nav-toggle">
+          <span></span>
+        </a>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a routerLink="/home" routerLinkActive="active">Home</a>
+        </li>
+        <li>
+          <a routerLink="/about" routerLinkActive="active">About</a>
+        </li>
+        <li>
+          <a>Services</a>
+          <ul class="nav-dropdown">
+            <li>
+              <a routerLink="/quotesearch" routerLinkActive="active">Quote Search</a>
+            </li>
+            <li>
+              <a routerLink="/marketperformance" routerLinkActive="active">Market Performance</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a routerLink="/login" routerLinkActive="active" *ngIf="!user">Login</a>
+        </li>
+        <li>
+          <a routerLink="/register" routerLinkActive="active" *ngIf="!user">Register</a>
+        </li>
+        <li>
+          <a routerLink="/user" routerLinkActive="active" *ngIf="user">Profile</a>
+        </li>
+        <li>
+          <a routerLink="/home" routerLinkActive="active" *ngIf="user"(click)="logout()">Log Out</a>
+        </li>
+        <li>
+          <a routerLink="/crud" routerLinkActive="active">CRUD</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>
 <router-outlet></router-outlet>

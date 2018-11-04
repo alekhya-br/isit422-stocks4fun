@@ -3,6 +3,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule }    from '@angular/common/http';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { environment } from '../environments/environment';
+import { AuthGuard } from './core/auth.guard';
+import { UserResolver } from './user/user.resolver';
 
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
@@ -13,15 +19,19 @@ import { MarketperformanceComponent } from './marketperformance/marketperformanc
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { CrudComponent } from './crud/crud.component';
+import { UserComponent } from './user/user.component';
+import { UserService } from './core/user.service';
+import { AuthService } from './core/auth.service';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomepageComponent },
   { path: 'about', component: AboutComponent},
   { path: 'quotesearch', component: QuotesearchComponent},
   { path: 'marketperformance', component: MarketperformanceComponent},
-  { path: 'login', component: LoginComponent},
-  { path: 'sign_up', component: SignUpComponent},
+  { path: 'login', component: LoginComponent, canActivate: [AuthGuard] },
+  { path: 'register', component: SignUpComponent, canActivate: [AuthGuard] },
   { path: 'crud', component: CrudComponent},
+  { path: 'user', component: UserComponent, resolve: { data: UserResolver }},
   { path: '',
     redirectTo: '/home',
     pathMatch: 'full'
@@ -39,7 +49,8 @@ const appRoutes: Routes = [
     MarketperformanceComponent,
     LoginComponent,
     SignUpComponent,
-    CrudComponent
+    CrudComponent,
+    UserComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -49,9 +60,12 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireAuthModule
   ],
-  providers: [],
+  providers: [AuthGuard, UserService, AuthService, UserResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
