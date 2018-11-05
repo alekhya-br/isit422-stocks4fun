@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserItem } from '../UserItem';
 //import { CrudS } from '../mock-Cruds';
-import { CrudServiceService } from '../crud-service.service';
+import { CrudService } from '../crud-service.service';
 
 @Component({
   selector: 'app-crud',
@@ -15,7 +15,7 @@ export class CrudComponent implements OnInit {
   selectedCrudItemPriorUsername: string;
 
   getUsers(): void {
-    this.myCrudServiceService.getAllUsers().subscribe((UserData: UserItem[]) => {
+    this.myCrudService.getAllUsers().subscribe((UserData: UserItem[]) => {
       this.TheUsers = UserData;
     })
   }
@@ -33,7 +33,7 @@ export class CrudComponent implements OnInit {
     iPassword = iPassword.trim();
     var newID = Object;
     var newItem: UserItem = { firstname: iFirstname, lastname: iLastname, username: iUsername, password: iPassword, _id: newID };
-    this.myCrudServiceService.insertUser(newItem as UserItem)
+    this.myCrudService.insertUser(newItem as UserItem)
       .subscribe(oneUser => {
         this.getUsers();    // call our own get all method to get a fresh copy and update our local array
         window.location.reload(); // esp to get the new _id that was created so it is available for deletes and updates
@@ -45,14 +45,14 @@ export class CrudComponent implements OnInit {
   updateUser(): void {
     var idToUpdate = this.selectedUserItem._id;
     var updateItem: UserItem = this.selectedUserItem;
-    this.myCrudServiceService.updateUser(idToUpdate as Number, updateItem as UserItem)
+    this.myCrudService.updateUser(idToUpdate as Number, updateItem as UserItem)
       .subscribe(
         // nothing to do
       );
   }
 
   deleteUser(deleteUserId: Number): void {
-    this.myCrudServiceService.deleteUser(deleteUserId as Number) // it is a base 16 number
+    this.myCrudService.deleteUser(deleteUserId as Number) // it is a base 16 number
       .subscribe();
     // update local data
     var pointer = this.TheUsers.length - 1;
@@ -63,7 +63,7 @@ export class CrudComponent implements OnInit {
     };
   }
 
-  constructor(private myCrudServiceService: CrudServiceService) { }
+  constructor(private myCrudService: CrudService) { }
 
   ngOnInit() {
     this.getUsers();

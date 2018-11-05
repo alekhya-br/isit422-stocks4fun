@@ -1,5 +1,12 @@
 <section id="marketChart">
-  Market Chart
+  <h2>Market Stocks</h2>
+  <div *ngIf="marketStocks">
+      <ul class="stocksClass">
+        <li class="stocksLi" *ngFor="let eachStock of marketStocks">
+          <span class="oneStock" >{{eachStock.symbol}} {{eachStock.price}} {{eachStock.change}}</span>
+        </li>
+      </ul>
+  </div>
 </section>
 <section id="marketWidget">
   Detailed Market Widget

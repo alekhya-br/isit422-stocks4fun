@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { UserItem } from './UserItem';
 
 @Injectable({ providedIn: 'root' })
-export class CrudServiceService {
+export class CrudService {
   constructor(private http: HttpClient) { }
 
 

@@ -1,11 +1,11 @@
 import { TestBed } from '@angular/core/testing';
-import { CrudService } from './crud-service.service';
+import { StockService } from './stock-service.service';
 
-describe('CrudService', () => {
+describe('StockService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: CrudService = TestBed.get(CrudService);
+    const service: StockService = TestBed.get(StockService);
     expect(service).toBeTruthy();
   });
 });
