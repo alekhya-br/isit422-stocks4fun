@@ -1,9 +1,9 @@
 <section id="marketChart">
   <h2>Market Stocks</h2>
-  <div *ngIf="marketStocks">
-      <ul class="stocksClass">
-        <li class="stocksLi" *ngFor="let eachStock of marketStocks">
-          <span class="oneStock" >{{eachStock.symbol}} {{eachStock.price}} {{eachStock.change}}</span>
+  <div *ngIf="marketData">
+      <ul class="marketClass">
+        <li class="marketLi" *ngFor="let eachMarket of marketData">
+          <span class="oneMarket" >{{eachMarket.symbol}} {{eachMarket.price}} {{eachMarket.change}}</span>
         </li>
       </ul>
   </div>

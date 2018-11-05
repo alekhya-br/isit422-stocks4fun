@@ -36,7 +36,7 @@ router.get('/', function (req, res) {
     res.send('no user here!');
 });
 
-router.get('/api', function (req, res) {
+router.get('/api/user_data', function (req, res) {
     mongoose.connect(conString, () => {    // like SQL, we first connect, then issue cmds
         mongousers.find({}, function (err, docs) {  // find({} gets all, docs is the name of the return json
             var oneUserArray = [];  // our new array we will return instead of TODOS array
@@ -51,7 +51,7 @@ router.get('/api', function (req, res) {
 });
 
 
-router.post('/api', function (req, res) {
+router.post('/api/user_data', function (req, res) {
     try {
         mongoose.connect(conString, () => {   // again, first we connect
             UserObject = req.body;  // get the posted data from angular
@@ -68,7 +68,7 @@ router.post('/api', function (req, res) {
     }
 });
 
-router.delete('/api/:id', function (req, res) {
+router.delete('/api/user_data/:id', function (req, res) {
     try {
         mongoose.connect(conString, () => {   // connect
             // now convert the angular _id into the correct object type for mongo
@@ -85,7 +85,7 @@ router.delete('/api/:id', function (req, res) {
     }
 });
 
-router.put('/api/:id', function (req, res) {  // modify existing User using an http put
+router.put('/api/user_data/:id', function (req, res) {  // modify existing User using an http put
     try {
         mongoose.connect(conString, () => {   // connect
             var mongoid = mongoose.Types.ObjectId(req.params.id);   // convert the angular _id to the object type for mongo

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { StockItem } from '../StockItem';
+import { MarketDataItem } from '../MarketDataItem';
 import { StockService } from '../stock-service.service';
 
 @Component({
@@ -9,11 +9,11 @@ import { StockService } from '../stock-service.service';
 })
 export class HomepageComponent implements OnInit {
 
-  marketStocks: StockItem[];
+  marketData: MarketDataItem[];
 
-  getStocks(): void {
-    this.myStockService.getAllStocks().subscribe((stockData: StockItem[]) => {
-      this.marketStocks = stockData;
+  getMarketData(): void {
+    this.myStockService.getMarketData().subscribe((marketData: MarketDataItem[]) => {
+      this.marketData = marketData;
     })
   }
 
@@ -21,7 +21,7 @@ export class HomepageComponent implements OnInit {
   { }
 
   ngOnInit() {
-    this.getStocks();
+    this.getMarketData();
   }
 
 }
