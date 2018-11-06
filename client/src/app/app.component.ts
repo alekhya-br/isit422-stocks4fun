@@ -32,9 +32,9 @@ export class AppComponent {
 
   logout() {
     this.authService.doLogout()
-      // .then(res => {
-      //   console.log(res);
-      // }, err => console.log(err))
+      .then(res => {
+        console.log(res);
+      }, err => console.log(err))
   }
 }
 
