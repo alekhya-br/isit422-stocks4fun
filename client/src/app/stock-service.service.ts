@@ -8,7 +8,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
 export class StockService {
-  private stocksUrl = 'http://localhost:3000/stock/api//stock_data/';
+  private stocksUrl = 'http://localhost:3000/stock/api/stock_data/';
   
   constructor(private http: HttpClient,
     private messageService: MessageService) { }
