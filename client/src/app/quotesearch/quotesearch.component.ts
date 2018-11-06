@@ -23,7 +23,7 @@ export class QuotesearchComponent implements OnInit {
     })
   }
   getSearchData(PassedinSymbol:string): void {
-      this.myStockService.searchQuotes().subscribe(); 
+      this.myStockService.searchQuotes(PassedinSymbol).subscribe(); 
  
       
   }
