@@ -22,17 +22,10 @@ export class QuotesearchComponent implements OnInit {
   search(term: string): void {
     this.searchTerms.next(term);
   }
-<<<<<<< HEAD
   getStock(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.myStockService.searchQuotes(id)
      // .subscribe(stocks => this.stocks = stocks);
-=======
-  getSearchData(PassedinSymbol:string): void {
-      this.myStockService.searchQuotes(PassedinSymbol).subscribe(); 
- 
-      
->>>>>>> 4ec34cb7321e1de926f1d601fb985c15b600755b
   }
 
   constructor(private route: ActivatedRoute,
