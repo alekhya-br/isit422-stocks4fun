@@ -4,11 +4,13 @@
       <table class="marketClass">
         <tr class="marketTr">
           <th class="marketTh">Symbol</th>
+          <th class="marketTh">Name</th>
           <th class="marketTh">Price</th>
           <th class="marketTh">Change</th>
         </tr>
         <tr class="marketTr" *ngFor="let eachMarket of marketData">
           <th class="marketTh">{{eachMarket.symbol}}</th>
+          <th class="marketTh">{{eachMarket.name}}</th>
           <th class="marketTh">{{eachMarket.price}}</th>
           <th class="marketTh">{{eachMarket.change}}</th>
         </tr>

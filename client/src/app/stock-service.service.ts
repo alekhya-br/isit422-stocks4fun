@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { MarketDataItem } from './MarketDataItem';
-import {StockDataItem} from './StockDataItem';
+import { StockDataItem } from './StockDataItem';
 import { MessageService } from './message.service';
 import { catchError, map, tap } from 'rxjs/operators';
 
