@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { MarketDataItem } from './MarketDataItem';
+import {StockDataItem} from './StockDataItem';
 import { MessageService } from './message.service';
 import { catchError, map, tap } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
 export class StockService {
-  private stocksUrl = 'http://localhost:3000/stock/api/market_data/';
+  private stocksUrl = 'http://localhost:3000/stock/api//stock_data/';
   
   constructor(private http: HttpClient,
     private messageService: MessageService) { }
@@ -16,14 +17,11 @@ export class StockService {
     return this.http.get<MarketDataItem[]>('http://localhost:3000/stock/api/market_data/');
   }
 
-  searchQuotes(term: string): Observable<MarketDataItem[]> {
-    if (!term.trim()) {
-      // if not search term, return empty stock array.
-      return of([]);
-    }
-    return this.http.get<MarketDataItem[]>(`${this.stocksUrl}/?symbol=${term}`).pipe(
-      tap(_ => this.log(`found symbols matching "${term}"`)),
-      catchError(this.handleError<MarketDataItem[]>('searchQuotes', []))
+  searchQuotes(id: number): Observable<StockDataItem[]> {
+    const url = `${this.stocksUrl}/${id}`;
+    return this.http.get<StockDataItem[]>(url).pipe(
+      tap(_ => this.log(`fetched stock id=${id}`)),
+      catchError(this.handleError<StockDataItem[]>(`getstock id=${id}`))
     );
   } 
 

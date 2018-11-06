@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MarketDataItem } from '../MarketDataItem';
 import { StockService } from '../stock-service.service';
+
+import { StockDataItem } from '../StockDataItem';
 
 
 @Component({
@@ -9,6 +11,7 @@ import { StockService } from '../stock-service.service';
   styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent implements OnInit {
+  @Input() stocks: StockDataItem;
 
   marketData: MarketDataItem[];
 
@@ -17,7 +20,8 @@ export class HomepageComponent implements OnInit {
       this.marketData = marketData;
     })
   }
-  constructor(private myStockService: StockService) 
+  constructor(
+    private myStockService: StockService) 
   { }
 
   ngOnInit() {
