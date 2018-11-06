@@ -29,16 +29,16 @@
           </ul>
         </li>
         <li>
-          <a routerLink="/login" routerLinkActive="active" *ngIf="!user">Login</a>
+          <a routerLink="/login" routerLinkActive="active" *ngIf="!isLoggedIn">Login</a>
         </li>
         <li>
-          <a routerLink="/register" routerLinkActive="active" *ngIf="!user">Register</a>
+          <a routerLink="/register" routerLinkActive="active" *ngIf="!isLoggedIn">Register</a>
         </li>
         <li>
-          <a routerLink="/user" routerLinkActive="active" *ngIf="user">Profile</a>
+          <a routerLink="/user" routerLinkActive="active" *ngIf="isLoggedIn">Profile</a>
         </li>
         <li>
-          <a routerLink="/home" routerLinkActive="active" *ngIf="user"(click)="logout()">Log Out</a>
+          <a routerLink="/home" routerLinkActive="active" *ngIf="isLoggedIn"(click)="logout()">Log Out</a>
         </li>
         <li>
           <a routerLink="/crud" routerLinkActive="active">CRUD</a>

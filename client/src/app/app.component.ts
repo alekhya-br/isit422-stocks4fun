@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import * as firebase from 'firebase';
 import { Subject } from 'rxjs';
@@ -12,20 +12,25 @@ import { Location } from '@angular/common';
 })
 export class AppComponent {
   title = 'isit422-stocks4fun';
+  isLoggedIn;
   public user: firebase.User;
 
   constructor(
     public authService: AuthService,
     private location: Location
   ) { }
-
+  ngOnInit() {
+    this.checkUser();
+  }
   checkUser() {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         this.user = user;
         console.log('logged in', user);
+        this.isLoggedIn = true;
       } else {
         console.log('not logged in');
+        this.isLoggedIn = false;
       }
     });
   }
