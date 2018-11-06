@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MarketDataItem } from '../MarketDataItem';
 import { StockService } from '../stock-service.service';
 
+
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -16,7 +17,6 @@ export class HomepageComponent implements OnInit {
       this.marketData = marketData;
     })
   }
-
   constructor(private myStockService: StockService) 
   { }
 

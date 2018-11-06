@@ -1,3 +1,8 @@
-<p>
-  quotesearch works!
-</p>
+<div id="search-component">
+  <h4>Quote Search</h4>
+  <h5>Enter the symbol to get details</h5>
+
+  <input type="text" [(ngModel)]="searchText" 
+   placeholder="symbol" />
+  <button type="submit" (click)="getSearchData()">Quote Search</button>
+</div>
