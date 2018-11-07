@@ -17,6 +17,7 @@ import {
 export class QuotesearchComponent implements OnInit {
   stockData: Observable<StockDataItem[]>;
   private searchTerms = new Subject<string>();
+  searchText: '';
   @Input() stocks: StockDataItem;
 
   search(term: string): void {
