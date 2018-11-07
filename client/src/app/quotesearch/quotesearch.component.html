@@ -3,6 +3,6 @@
   <h5>Enter the symbol to get details</h5>
 
   <input type="text" [(ngModel)]="searchText" 
-   placeholder="symbol" />
-  <button type="submit" (click)="getStock()">Quote Search</button>
+   placeholder="symbol" #searchTerm/>
+  <button type="submit" (click)="getStock(searchTerm.value)">Quote Search</button>
 </div>

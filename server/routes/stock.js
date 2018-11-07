@@ -28,4 +28,19 @@ router.get('/api/stock_data', function(req, res) {
     res.send( stockData );
 });
 
+router.get('/api/stock_search/:id', function(req, res) {
+    try {
+        for (var i = 0; i < stockData.length; ++i){
+            if (obj[i].symbol == req.params.id.toUpperCase()){
+                console.log("found: " + req.params.id);
+                res.send( obj[i] );
+            }
+        }
+    }
+    catch (ex) {
+        console.log("oh crap " + ex);
+        res.sendStatus(404);  // say not found
+    }
+});
+
 module.exports = router;

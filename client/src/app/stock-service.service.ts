@@ -8,7 +8,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
 export class StockService {
-  private stocksUrl = 'http://localhost:3000/stock/api/stock_data/';
+  private stocksUrl = 'http://localhost:3000/stock/api/stock_search/';
   
   constructor(private http: HttpClient,
     private messageService: MessageService) { }
@@ -17,7 +17,8 @@ export class StockService {
     return this.http.get<MarketDataItem[]>('http://localhost:3000/stock/api/market_data/');
   }
 
-  searchQuotes(id: number): Observable<StockDataItem[]> {
+  searchQuotes(id: string): Observable<StockDataItem[]> {
+    console.log('search quotes called');
     const url = `${this.stocksUrl}/${id}`;
     return this.http.get<StockDataItem[]>(url).pipe(
       tap(_ => this.log(`fetched stock id=${id}`)),

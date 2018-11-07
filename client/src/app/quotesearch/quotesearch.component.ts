@@ -22,9 +22,10 @@ export class QuotesearchComponent implements OnInit {
   search(term: string): void {
     this.searchTerms.next(term);
   }
-  getStock(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.myStockService.searchQuotes(id)
+  getStock(term: string): void {
+    //const id = +this.route.snapshot.paramMap.get('id');
+    const searchResult = this.myStockService.searchQuotes(term);
+    console.log('getStock called');
      // .subscribe(stocks => this.stocks = stocks);
   }
 
@@ -40,7 +41,7 @@ export class QuotesearchComponent implements OnInit {
       distinctUntilChanged(),
 
       // switch to new search observable each time the term changes
-      switchMap((id: number) => this.myStockService.searchQuotes(id)),
+      switchMap((id: string) => this.myStockService.searchQuotes(id)),
     );
   }
 
