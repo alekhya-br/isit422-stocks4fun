@@ -17,6 +17,14 @@ export class StockService {
     return this.http.get<MarketDataItem[]>('http://localhost:3000/stock/api/market_data/');
   }
 
+  getWinningStocks(): Observable<StockDataItem[]> {
+    return this.http.get<StockDataItem[]>('http://localhost:3000/stock/api/winning_stocks/');
+  }
+
+  getLosingStocks(): Observable<StockDataItem[]> {
+    return this.http.get<StockDataItem[]>('http://localhost:3000/stock/api/losing_stocks/');
+  }
+
   searchQuotes(id: string): Observable<StockDataItem[]> {
     console.log('search quotes called');
     const url = `${this.stocksUrl}/${id}`;

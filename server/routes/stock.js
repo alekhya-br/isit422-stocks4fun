@@ -15,6 +15,22 @@ var stockData = [
     { symbol: 'AMZN', name: 'Amazon.com Inc', price: 400, change: 100}
 ];
 
+var winningStocks = [
+    { symbol: 'AKER', name: 'Akers Biosciences Inc', price: 2.25, change: 1.94},
+    { symbol: 'CYTXW', name: 'Cytori Therapeutic Inc', price: 0.02, change: 0.01},
+    { symbol: 'NUROW', name: 'NeuroMetrix Inc', price: 0.07, change: 0.04},
+    { symbol: 'IAMXR', name: 'I-AM Capital Acquisition Company Rights', price: 0.51, change: 0.24},
+    { symbol: 'CLRBZ', name: 'Cellectar Biosciences Inc', price: 0.14, change: 0.06}
+];
+
+var losingStocks = [
+    { symbol: 'OXBRW', name: 'Oxbridge Re Holdings Ltd', price: 0.02, change: -0.07},
+    { symbol: 'CHEKW', name: 'Check-Cap Ltd', price: 0.07, change: -0.10},
+    { symbol: 'DLPNW', name: 'Dolphin Entertainment Inc', price: 0.08, change: -0.09},
+    { symbol: 'MGI', name: 'MoneyGram International Inc', price: 2.27, change: 2.20},
+    { symbol: 'AMRHW', name: 'Ameri Holdings Inc', price: 0.03, change: -0.02}
+];
+
 /* GET home page. */
 router.get('/', function(req, res) {
     res.send('no stock here!');
@@ -28,12 +44,20 @@ router.get('/api/stock_data', function(req, res) {
     res.send( stockData );
 });
 
-router.get('/api/stock_search/:id', function(req, res) {
+router.get('/api/winning_stocks', function(req, res) {
+    res.send( winningStocks );
+});
+
+router.get('/api/losing_stocks', function(req, res) {
+    res.send( losingStocks );
+});
+
+router.get('/api/stock_search/:name', function(req, res) {
     try {
         for (var i = 0; i < stockData.length; ++i){
-            if (obj[i].symbol == req.params.id.toUpperCase()){
-                console.log("found: " + req.params.id);
-                res.send( obj[i] );
+            if (stockData[i].symbol == req.params.id.toUpperCase()){
+                console.log("found: " + req.params.name);
+                res.send( stockData[i] );
             }
         }
     }
