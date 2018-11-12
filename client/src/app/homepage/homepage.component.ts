@@ -8,6 +8,7 @@ import { StockService } from '../stock-service.service';
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.scss']
 })
+
 export class HomepageComponent implements OnInit {
   @Input() stocks: StockDataItem;
 

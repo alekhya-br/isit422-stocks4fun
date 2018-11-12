@@ -52,19 +52,26 @@ router.get('/api/losing_stocks', function(req, res) {
     res.send( losingStocks );
 });
 
-router.get('/api/stock_search/:name', function(req, res) {
+router.get('/api/stock_search/:term', function(req, res) {
     try {
-        for (var i = 0; i < stockData.length; ++i){
-            if (stockData[i].symbol == req.params.id.toUpperCase()){
-                console.log("found: " + req.params.name);
+        let found = false;
+        for (var i = 0; i < stockData.length; ++i) {
+            if (stockData[i].symbol == req.params.term.toUpperCase()){
+                console.log("found: " + req.params.term);
+                found = true;
                 res.send( stockData[i] );
+                break;
             }
+        }
+        if(!found) {
+            res.sendStatus(404);  // say not found
         }
     }
     catch (ex) {
         console.log("oh crap " + ex);
         res.sendStatus(404);  // say not found
     }
+    
 });
 
 module.exports = router;

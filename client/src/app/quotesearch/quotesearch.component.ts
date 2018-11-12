@@ -1,49 +1,30 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { MarketDataItem } from '../MarketDataItem';
 import { StockDataItem } from '../StockDataItem';
 import { StockService } from '../stock-service.service';
-import { ActivatedRoute } from '@angular/router';
-
-import { Observable, Subject } from 'rxjs';
-
-import {
-   debounceTime, distinctUntilChanged, switchMap
- } from 'rxjs/operators';
 
 @Component({
   selector: 'app-quotesearch',
   templateUrl: './quotesearch.component.html',
   styleUrls: ['./quotesearch.component.scss']
 })
-export class QuotesearchComponent implements OnInit {
-  stockData: Observable<StockDataItem[]>;
-  private searchTerms = new Subject<string>();
-  searchText: '';
+
+export class QuotesearchComponent {
   @Input() stocks: StockDataItem;
 
-  search(term: string): void {
-    this.searchTerms.next(term);
-  }
+  searchResult: StockDataItem;
+
   getStock(term: string): void {
     //const id = +this.route.snapshot.paramMap.get('id');
-    const searchResult = this.myStockService.searchQuotes(term);
+    this.myStockService.searchQuotes(term).subscribe((searchResult: StockDataItem) => {
+      this.searchResult = searchResult;
+    })
     console.log('getStock called');
      // .subscribe(stocks => this.stocks = stocks);
   }
 
-  constructor(private route: ActivatedRoute,
-    private myStockService: StockService) { }
-
-  ngOnInit() {
-    this.stockData = this.searchTerms.pipe(
-      // wait 300ms after each keystroke before considering the term
-      debounceTime(300),
-
-      // ignore new term if same as previous term
-      distinctUntilChanged(),
-
-      // switch to new search observable each time the term changes
-      switchMap((id: string) => this.myStockService.searchQuotes(id)),
-    );
-  }
+  constructor(
+    private myStockService: StockService) 
+  { }
 
 }
