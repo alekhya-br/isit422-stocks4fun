@@ -9,9 +9,13 @@ import { catchError, map, tap } from 'rxjs/operators';
 @Injectable({ providedIn: 'root' })
 export class StockService {
   private stocksUrl = 'http://localhost:3000/stock/api/stock_search';
-  
+
   constructor(private http: HttpClient,
     private messageService: MessageService) { }
+
+  getApiMarketData(): Observable<MarketDataItem[]> {
+    return this.http.get<MarketDataItem[]>('http://localhost:3000/api/stock_data');
+  }
 
   getMarketData(): Observable<MarketDataItem[]> {
     return this.http.get<MarketDataItem[]>('http://localhost:3000/stock/api/market_data/');
@@ -32,26 +36,26 @@ export class StockService {
       tap(_ => this.log(`fetched stock term=${term}`)),
       catchError(this.handleError<StockDataItem>(`getstock term=${term}`))
     );
-  } 
+  }
 
-  private handleError<T> (operation = 'operation', result?: T) {
-  return (error: any): Observable<T> => {
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
 
-    // TODO: send the error to remote logging infrastructure
-    console.error(error); // log to console instead
+      // TODO: send the error to remote logging infrastructure
+      console.error(error); // log to console instead
 
-    // TODO: better job of transforming error for user consumption
-    this.log(`${operation} failed: ${error.message}`);
+      // TODO: better job of transforming error for user consumption
+      this.log(`${operation} failed: ${error.message}`);
 
-    // Let the app keep running by returning an empty result.
-    return of(result as T);
-  };
+      // Let the app keep running by returning an empty result.
+      return of(result as T);
+    };
   }
 
   /** Log a StockService message with the MessageService */
   private log(message: string) {
-    
-  this.messageService.add(`StockService: ${message}`);
+
+    this.messageService.add(`StockService: ${message}`);
   }
 }
 

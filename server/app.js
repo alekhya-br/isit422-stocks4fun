@@ -9,6 +9,7 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var user = require('./routes/user');
 var stock = require('./routes/stock');
+var api = require('./routes/api');
 
 var app = express();
 app.use(cors());              // cors number 2 of 3
@@ -29,6 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/user', user);
 app.use('/stock', stock);
+app.use('/api', api);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

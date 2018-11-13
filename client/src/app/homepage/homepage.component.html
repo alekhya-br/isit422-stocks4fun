@@ -1,5 +1,22 @@
 <section id="marketChart">
-  <h2>Market Stocks</h2>
+  <h2>Api Market Stocks</h2>
+  <div *ngIf="apiMarketData">
+    <table class="marketClass">
+      <tr class="marketTr">
+        <th class="marketTh">Symbol</th>
+        <th class="marketTh">Name</th>
+        <th class="marketTh">Price</th>
+        <th class="marketTh">Change</th>
+      </tr>
+      <tr class="marketTr" *ngFor="let eachMarket of apiMarketData">
+        <th class="marketTh">{{eachMarket.symbol}}</th>
+        <th class="marketTh">{{eachMarket.name}}</th>
+        <th class="marketTh">{{eachMarket.price}}</th>
+        <th class="marketTh">{{eachMarket.change}}</th>
+      </tr>
+    </table>
+  </div>
+  <h2>Mock Market Stocks</h2>
   <div *ngIf="marketData">
       <table class="marketClass">
         <tr class="marketTr">

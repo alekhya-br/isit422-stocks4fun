@@ -12,9 +12,16 @@ import { StockService } from '../stock-service.service';
 export class HomepageComponent implements OnInit {
   @Input() stocks: StockDataItem;
 
+  apiMarketData: MarketDataItem[];
   marketData: MarketDataItem[];
   winningStocks: StockDataItem[];
   losingStocks: StockDataItem[];
+
+  getApiMarketData(): void {
+    this.myStockService.getApiMarketData().subscribe((apiMarketData: MarketDataItem[]) => {
+      this.apiMarketData = apiMarketData;
+    })
+  }
 
   getMarketData(): void {
     this.myStockService.getMarketData().subscribe((marketData: MarketDataItem[]) => {
@@ -39,6 +46,7 @@ export class HomepageComponent implements OnInit {
   { }
 
   ngOnInit() {
+    this.getApiMarketData();
     this.getMarketData();
     this.getWinningStocks();
     this.getLosingStocks();
