@@ -20,3 +20,54 @@
     </div>
   </div>
 </div>
+
+<div class="col-md-8 col-md-offset-2">
+  <h3>Manage Portfolio: {{portfolio.type}}</h3>
+
+  <button class="btn btn-primary" (click)="setModalFields(true)" data-toggle="modal" data-target="#buyStockModal">Buy Stocks</button>
+  <button class="btn btn-warning" (click)="setModalFields(false)" data-toggle="modal" data-target="#buyStockModal">Sell Stocks</button>
+
+  <table class="table table-bordered">
+      <thead>
+        <tr><th>Stock</th><th>Quantity</th><th>Purchase Price</th><th>Actions</th></tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let stock of portfolio.stocks">
+          <td>{{stock.symbol}}</td>
+          <td>{{stock.quantity}}</td>
+          <td style="text-align:right"><strong>$ {{stock.purchasePrice | number:'1.2-2'}}</strong></td>
+          <td>
+            <button class="btn btn-xs btn-success" (click)="setModalFields(true, stock.symbol, stock.quantity, stock.purchasePrice)" 
+              data-toggle="modal" data-target="#buyStockModal"><i title="Buy More" class="fa fa-plus-circle"></i>
+            </button>
+            <button class="btn btn-xs btn-danger" (click)="setModalFields(false, stock.symbol, stock.quantity, stock.purchasePrice)"
+              data-toggle="modal" data-target="#buyStockModal"><i title="Sell" class="fa fa-minus-circle"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+</div>
+
+<div class="modal fade" id="buyStockModal" tabindex="-1" role="dialog" aria-labelledby="buyStockModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="buyStockModalLabel">{{buy ? "Buy" : "Sell"}} stock</h4>
+      </div>
+      <div class="modal-body">
+        <label for="stockSymbol">Stock symbol:</label><input class="form-control" placeholder="(MSFT, GOOG, AAPL, etc.)" type="text" name="stockSymbol" [(ngModel)]="symbol"/>
+        <label for="quantity">Quantity:</label><input class="form-control" placeholder="How many shares?" type="text" name="quantity" [(ngModel)]="quantity"/>
+        <label for="price">Price: $</label><input class="form-control" placeholder="Price" type="text" name="price" [(ngModel)]="price"/>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="closePortfolioModal" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" (click)="buyOrSellStock()" class="btn btn-primary" data-dismiss="modal">{{buy ? "Buy" : "Sell"}}</button>
+      </div>
+    </div>
+  </div>
+</div>
+

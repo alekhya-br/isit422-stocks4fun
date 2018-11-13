@@ -5,6 +5,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FirebaseUserModel } from '../core/user.model';
+import { UserItem } from '../UserItem';
+import { CrudService } from '../crud-service.service';
 
 @Component({
   selector: 'page-user',
@@ -12,11 +14,36 @@ import { FirebaseUserModel } from '../core/user.model';
   styleUrls: ['user.component.scss']
 })
 export class UserComponent implements OnInit {
+  TheUsers: UserItem[];
 
-  user: FirebaseUserModel = new FirebaseUserModel();
+  buy: Boolean = true;
+  symbol: string;
+  quantity: number;
+  price: number;
+
+  _id;
+
+  portfolio: any = {};
+
+  setModalFields(buy, stock?, qty?, price?) {
+    this.buy = buy;
+    this.symbol = stock;
+    this.quantity = qty;
+    this.price = price;
+  }
+
+  buyOrSellStock() {
+    this.myCrudService.buySellStock(this.portfolio, this._id, this.symbol, this.buy ? this.quantity : -this.quantity , this.price).subscribe((res) => {
+        alert("Successfully bought/sold stocks.");
+      });
+  }
+
+
+  user: FirebaseUserModel = new FirebaseUserModel();subscribesubscribe
   profileForm: FormGroup;
 
   constructor(
+    private myCrudService: CrudService,
     public userService: UserService,
     public authService: AuthService,
     private route: ActivatedRoute,
@@ -33,7 +60,12 @@ export class UserComponent implements OnInit {
         this.user = data;
         this.createForm(this.user.name);
       }
-    })
+    }),
+    this._id = this.route.snapshot.paramMap.get('id');
+    console.log("Getting portfolio: " + this._id);
+    this.myCrudService.getPortfolio(this._id).subscribe((UserData: UserItem[]) => {
+      this.portfolio = UserData;
+    });
   }
 
   createForm(name) {
@@ -48,4 +80,5 @@ export class UserComponent implements OnInit {
         console.log(res);
       }, err => console.log(err))
   }
+
 }

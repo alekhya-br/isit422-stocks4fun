@@ -5,6 +5,7 @@ import { MarketDataItem } from './MarketDataItem';
 import { StockDataItem } from './StockDataItem';
 import { MessageService } from './message.service';
 import { catchError, map, tap } from 'rxjs/operators';
+import * as Moment from 'moment';
 
 @Injectable({ providedIn: 'root' })
 export class StockService {
