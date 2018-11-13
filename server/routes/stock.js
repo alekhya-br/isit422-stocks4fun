@@ -31,6 +31,7 @@ var losingStocks = [
     { symbol: 'AMRHW', name: 'Ameri Holdings Inc', price: 0.03, change: -0.02}
 ];
 
+
 /* GET home page. */
 router.get('/', function(req, res) {
     res.send('no stock here!');
