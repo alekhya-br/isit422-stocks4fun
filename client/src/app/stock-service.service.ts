@@ -15,7 +15,7 @@ export class StockService {
     private messageService: MessageService) { }
 
   getApiMarketData(): Observable<MarketDataItem[]> {
-    return this.http.get<MarketDataItem[]>('http://localhost:3000/api/stock_data');
+    return this.http.get<MarketDataItem[]>('http://localhost:3000/api/stock_data/');
   }
 
   getMarketData(): Observable<MarketDataItem[]> {
