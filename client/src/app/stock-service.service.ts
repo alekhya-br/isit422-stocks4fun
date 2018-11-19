@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpEvent } from '@angular/common/http';
 import { MarketDataItem } from './MarketDataItem';
 import { StockDataItem } from './StockDataItem';
 import { MessageService } from './message.service';
@@ -15,28 +15,25 @@ export class StockService {
     private messageService: MessageService) { }
 
   getApiMarketData(): Observable<MarketDataItem[]> {
-    return this.http.get<MarketDataItem[]>('http://localhost:3000/api/stock_data/');
+    return this.http.get<MarketDataItem[]>('http://localhost:3000/api/market_data');
   }
 
   getMarketData(): Observable<MarketDataItem[]> {
-    return this.http.get<MarketDataItem[]>('http://localhost:3000/stock/api/market_data/');
+    return this.http.get<MarketDataItem[]>('http://localhost:3000/stock/api/market_data');
   }
 
   getWinningStocks(): Observable<StockDataItem[]> {
-    return this.http.get<StockDataItem[]>('http://localhost:3000/stock/api/winning_stocks/');
+    return this.http.get<StockDataItem[]>('http://localhost:3000/stock/api/winning_stocks');
   }
 
   getLosingStocks(): Observable<StockDataItem[]> {
-    return this.http.get<StockDataItem[]>('http://localhost:3000/stock/api/losing_stocks/');
+    return this.http.get<StockDataItem[]>('http://localhost:3000/stock/api/losing_stocks');
   }
 
-  searchQuotes(term: string): Observable<StockDataItem> {
-    console.log('search quotes called');
-    const url = `${this.stocksUrl}/${term}`;
-    return this.http.get<StockDataItem>(url).pipe(
-      tap(_ => this.log(`fetched stock term=${term}`)),
-      catchError(this.handleError<StockDataItem>(`getstock term=${term}`))
-    );
+  searchQuotes(term: string): Observable<StockDataItem[]> {
+    return this.http.get<StockDataItem[]>('http://localhost:3000/api/quote_search', {
+      params: { search_term: `${term}` }
+    });
   }
 
   private handleError<T>(operation = 'operation', result?: T) {
