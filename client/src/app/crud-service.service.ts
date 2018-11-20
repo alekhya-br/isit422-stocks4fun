@@ -51,8 +51,8 @@ export class CrudService {
     portfolio.stocks.push({
       portfolioId: _id,
       symbol: symbol,
-      purchaseQuantity: quantity,
-      purchasePrice: price
+      quantity: quantity,
+      price: price
     });
     return this.http.put<StockDataItem>('http://localhost:3000/stock/api/stock_data/' + _id, portfolio);
 }

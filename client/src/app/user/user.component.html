@@ -35,12 +35,12 @@
         <tr *ngFor="let stock of portfolio.stocks">
           <td>{{stock.symbol}}</td>
           <td>{{stock.quantity}}</td>
-          <td style="text-align:right"><strong>$ {{stock.purchasePrice | number:'1.2-2'}}</strong></td>
+          <td style="text-align:right"><strong>$ {{stock.price | number:'1.2-2'}}</strong></td>
           <td>
-            <button class="btn btn-xs btn-success" (click)="setModalFields(true, stock.symbol, stock.quantity, stock.purchasePrice)" 
+            <button class="btn btn-xs btn-success" (click)="setModalFields(true, stock.symbol, stock.quantity, stock.price)" 
               data-toggle="modal" data-target="#buyStockModal"><i title="Buy More" class="fa fa-plus-circle"></i>
             </button>
-            <button class="btn btn-xs btn-danger" (click)="setModalFields(false, stock.symbol, stock.quantity, stock.purchasePrice)"
+            <button class="btn btn-xs btn-danger" (click)="setModalFields(false, stock.symbol, stock.quantity, stock.price)"
               data-toggle="modal" data-target="#buyStockModal"><i title="Sell" class="fa fa-minus-circle"></i>
             </button>
           </td>
