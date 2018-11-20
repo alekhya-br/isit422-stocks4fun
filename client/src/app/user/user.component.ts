@@ -7,6 +7,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FirebaseUserModel } from '../core/user.model';
 import { UserItem } from '../UserItem';
 import { CrudService } from '../crud-service.service';
+import { StockService } from '../stock-service.service';
+import { StockDataItem } from '../StockDataItem';
 
 @Component({
   selector: 'page-user',
@@ -15,6 +17,7 @@ import { CrudService } from '../crud-service.service';
 })
 export class UserComponent implements OnInit {
   TheUsers: UserItem[];
+  searchResult: StockDataItem[];
 
   buy: Boolean = true;
   symbol: string;
@@ -33,7 +36,10 @@ export class UserComponent implements OnInit {
   }
 
   buyOrSellStock() {
-    this.myCrudService.buySellStock(this.portfolio, this._id, this.symbol, this.buy ? this.quantity : -this.quantity , this.price).subscribe((res) => {
+    this.myStockService.searchQuotes(this.symbol).subscribe((searchResult: StockDataItem[]) => {
+      this.searchResult = searchResult;
+    });
+    this.myCrudService.buySellStock(this.portfolio, this._id, this.symbol, this.buy ? this.quantity : -this.quantity , this.searchResult[0].price).subscribe((res) => {
         alert("Successfully bought/sold stocks.");
       });
   }
@@ -48,7 +54,8 @@ export class UserComponent implements OnInit {
     public authService: AuthService,
     private route: ActivatedRoute,
     private location: Location,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private myStockService: StockService
   ) {
 
   }
