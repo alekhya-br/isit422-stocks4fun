@@ -47,7 +47,6 @@ export class HomepageComponent implements OnInit {
 
   ngOnInit() {
     this.getApiMarketData();
-    this.getMarketData();
     this.getWinningStocks();
     this.getLosingStocks();
   }

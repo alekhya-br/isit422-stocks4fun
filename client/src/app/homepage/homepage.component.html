@@ -8,7 +8,7 @@
         <th class="marketTh">Price</th>
         <th class="marketTh">% Change</th>
       </tr>
-      <tr class="marketTr" *ngFor="let eachMarket of apiMarketData">
+      <tr id="testMarket" class="marketTr" *ngFor="let eachMarket of apiMarketData">
         <th class="marketTh">{{eachMarket.symbol}}</th>
         <th class="marketTh">{{eachMarket.name}}</th>
         <th class="marketTh">{{eachMarket.price}}</th>
@@ -32,7 +32,7 @@
         <th class="winningStocksTh">{{eachStock.symbol}}</th>
         <th class="winningStocksTh">{{eachStock.name}}</th>
         <th class="winningStocksTh">{{eachStock.price}}</th>
-        <th class="winningStocksTh">{{eachStock.change}}</th>
+        <th class="winningStocksTh">{{eachStock.change_pct}}</th>
       </tr>
     </table>
   </div>
@@ -52,7 +52,7 @@
         <th class="losingStocksTh">{{eachStock.symbol}}</th>
         <th class="losingStocksTh">{{eachStock.name}}</th>
         <th class="losingStocksTh">{{eachStock.price}}</th>
-        <th class="losingStocksTh">{{eachStock.change}}</th>
+        <th class="losingStocksTh">{{eachStock.change_pct}}</th>
       </tr>
     </table>
   </div>
