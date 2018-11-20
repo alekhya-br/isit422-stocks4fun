@@ -17,7 +17,7 @@ import { StockDataItem } from '../StockDataItem';
 })
 export class UserComponent implements OnInit {
   TheUsers: UserItem[];
-  searchResult: StockDataItem[];
+  searchResult: StockDataItem;
 
   buy: Boolean = true;
   symbol: string;
@@ -36,10 +36,10 @@ export class UserComponent implements OnInit {
   }
 
   buyOrSellStock() {
-    this.myStockService.searchQuotes(this.symbol).subscribe((searchResult: StockDataItem[]) => {
+    this.myStockService.searchDummyQuotes(this.symbol).subscribe((searchResult: StockDataItem) => {
       this.searchResult = searchResult;
     });
-    this.myCrudService.buySellStock(this.portfolio, this._id, this.symbol, this.buy ? this.quantity : -this.quantity , this.searchResult[0].price).subscribe((res) => {
+    this.myCrudService.buySellStock(this.portfolio, this._id, this.symbol, this.buy ? this.quantity : -this.quantity , this.price).subscribe((res) => {
         alert("Successfully bought/sold stocks.");
       });
   }
