@@ -39,7 +39,7 @@ export class UserComponent implements OnInit {
     this.myStockService.searchDummyQuotes(this.symbol).subscribe((searchResult: StockDataItem) => {
       this.searchResult = searchResult;
     });
-    this.myCrudService.buySellStock(this.portfolio, this._id, this.symbol, this.buy ? this.quantity : -this.quantity , this.price).subscribe((res) => {
+    this.myCrudService.buySellStock(this.portfolio, this._id, this.symbol, this.buy ? this.quantity : -this.quantity , this.searchResult.price).subscribe((res) => {
         alert("Successfully bought/sold stocks.");
       });
   }
