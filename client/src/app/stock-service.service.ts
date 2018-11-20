@@ -36,6 +36,15 @@ export class StockService {
     });
   }
 
+  searchDummyQuotes(term: string): Observable<StockDataItem> {
+    console.log('search quotes called');
+    const url = `${this.stocksUrl}/${term}`;
+    return this.http.get<StockDataItem>(url).pipe(
+      tap(_ => this.log(`fetched stock term=${term}`)),
+      catchError(this.handleError<StockDataItem>(`getstock term=${term}`))
+    );
+  }
+
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
 
