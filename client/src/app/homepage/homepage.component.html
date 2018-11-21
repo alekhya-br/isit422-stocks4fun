@@ -1,14 +1,14 @@
 <section id="marketChart">
-  <h2>Api Market Stocks</h2>
+  <h2>Market Stocks</h2>
   <div *ngIf="apiMarketData">
     <table class="marketClass">
       <tr class="marketTr">
         <th class="marketTh">Symbol</th>
         <th class="marketTh">Name</th>
         <th class="marketTh">Price</th>
-        <th class="marketTh">Change</th>
+        <th class="marketTh">% Change</th>
       </tr>
-      <tr class="marketTr" *ngFor="let eachMarket of apiMarketData">
+      <tr id="testMarket" class="marketTr" *ngFor="let eachMarket of apiMarketData">
         <th class="marketTh">{{eachMarket.symbol}}</th>
         <th class="marketTh">{{eachMarket.name}}</th>
         <th class="marketTh">{{eachMarket.price}}</th>
@@ -16,29 +16,8 @@
       </tr>
     </table>
   </div>
-  <h2>Mock Market Stocks</h2>
-  <div *ngIf="marketData">
-    <table class="marketClass">
-      <tr class="marketTr">
-        <th class="marketTh">Symbol</th>
-        <th class="marketTh">Name</th>
-        <th class="marketTh">Price</th>
-        <th class="marketTh">Change</th>
-      </tr>
-      <tr class="marketTr" *ngFor="let eachMarket of marketData">
-        <th class="marketTh">{{eachMarket.symbol}}</th>
-        <th class="marketTh">{{eachMarket.name}}</th>
-        <th class="marketTh">{{eachMarket.price}}</th>
-        <th class="marketTh">{{eachMarket.change}}</th>
-      </tr>
-    </table>
-  </div>
 </section>
-<br/>
-<section id="marketWidget">
-  Detailed Market Widget
-</section>
-<br/>
+<hr/>
 <section id="winningStocksChart">
   <h2>Top Winning Stocks</h2>
   <div *ngIf="winningStocks">
@@ -53,7 +32,7 @@
         <th class="winningStocksTh">{{eachStock.symbol}}</th>
         <th class="winningStocksTh">{{eachStock.name}}</th>
         <th class="winningStocksTh">{{eachStock.price}}</th>
-        <th class="winningStocksTh">{{eachStock.change}}</th>
+        <th class="winningStocksTh">{{eachStock.change_pct}}</th>
       </tr>
     </table>
   </div>
@@ -73,7 +52,7 @@
         <th class="losingStocksTh">{{eachStock.symbol}}</th>
         <th class="losingStocksTh">{{eachStock.name}}</th>
         <th class="losingStocksTh">{{eachStock.price}}</th>
-        <th class="losingStocksTh">{{eachStock.change}}</th>
+        <th class="losingStocksTh">{{eachStock.change_pct}}</th>
       </tr>
     </table>
   </div>

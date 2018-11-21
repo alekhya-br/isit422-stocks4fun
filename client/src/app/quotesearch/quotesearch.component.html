@@ -1,24 +1,30 @@
-<div id="search-component">
-  <h4>Quote Search</h4>
-  <h5>Enter the symbol to get details</h5>
-
-  <input type="text" [(ngModel)]="searchText" 
-   placeholder="symbol" #searchTerm/>
-  <button type="submit" (click)="getStock(searchTerm.value)">Quote Search</button>
-  <div *ngIf="searchResult">
-    <table class="searchResultClass">
-      <tr class="searchResultsTr">
-        <th class="searchResultTh">Symbol</th>
-        <th class="searchResultTh">Name</th>
-        <th class="searchResultTh">Price</th>
-        <th class="searchResultTh">Change</th>
-      </tr>
-      <tr class="searchResultTr">
-        <th class="searchResultTh">{{searchResult.symbol}}</th>
-        <th class="searchResultTh">{{searchResult.name}}</th>
-        <th class="searchResultTh">{{searchResult.price}}</th>
-        <th class="searchResultTh">{{searchResult.change}}</th>
-      </tr>
+<div id="search-component" class="container-fluid">
+  <div class="form jumbotron">
+    <h4>Quote Search</h4>
+    <h5>Enter the symbol to get details</h5>
+    <div class="input-group">
+      <input type="text" class="form-control" [(ngModel)]="searchText" placeholder="symbol" #searchTerm />
+      <div class="input-group-append">
+        <button type="submit" (click)="getStock(searchTerm.value)" class="btn btn-primary">Quote Search</button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="searchResult" class="table-responsive ">
+    <table class="table table-striped col-xs-12">
+      <tbody>
+        <tr >
+          <th>Symbol</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th *ngIf="showChange">Change</th>
+        </tr>
+        <tr *ngFor="let eachStock of searchResult">
+          <th>{{eachStock.symbol}}</th>
+          <th>{{eachStock.name}}</th>
+          <th>{{eachStock.price}}</th>
+          <th *ngIf="showChange">{{eachStock.change_pct}}</th>
+        </tr>
+      </tbody>
     </table>
-</div>
+  </div>
 </div>

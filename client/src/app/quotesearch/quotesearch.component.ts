@@ -12,19 +12,24 @@ import { StockService } from '../stock-service.service';
 export class QuotesearchComponent {
   @Input() stocks: StockDataItem;
 
-  searchResult: StockDataItem;
+  searchText: string = 'TSLA';
+  searchResult: StockDataItem[];
+  showChange: boolean;
 
   getStock(term: string): void {
     //const id = +this.route.snapshot.paramMap.get('id');
-    this.myStockService.searchQuotes(term).subscribe((searchResult: StockDataItem) => {
+    this.myStockService.searchQuotes(term).subscribe((searchResult: StockDataItem[]) => {
+      const showChange = searchResult.findIndex(w => w.change_pct !== undefined) >= 0;
       this.searchResult = searchResult;
+      this.showChange = showChange;
+      console.log(`getStock result,`)
+      console.log(searchResult)
     })
     console.log('getStock called');
-     // .subscribe(stocks => this.stocks = stocks);
+    // .subscribe(stocks => this.stocks = stocks);
   }
 
   constructor(
-    private myStockService: StockService) 
-  { }
+    private myStockService: StockService) { }
 
 }

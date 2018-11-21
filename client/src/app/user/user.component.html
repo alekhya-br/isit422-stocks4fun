@@ -25,7 +25,6 @@
   <h3>Manage Portfolio: {{portfolio.type}}</h3>
 
   <button class="btn btn-primary" (click)="setModalFields(true)" data-toggle="modal" data-target="#buyStockModal">Buy Stocks</button>
-  <button class="btn btn-warning" (click)="setModalFields(false)" data-toggle="modal" data-target="#buyStockModal">Sell Stocks</button>
 
   <table class="table table-bordered">
       <thead>
@@ -35,12 +34,12 @@
         <tr *ngFor="let stock of portfolio.stocks">
           <td>{{stock.symbol}}</td>
           <td>{{stock.quantity}}</td>
-          <td style="text-align:right"><strong>$ {{stock.purchasePrice | number:'1.2-2'}}</strong></td>
+          <td style="text-align:right"><strong>$ {{stock.price | number:'1.2-2'}}</strong></td>
           <td>
-            <button class="btn btn-xs btn-success" (click)="setModalFields(true, stock.symbol, stock.quantity, stock.purchasePrice)" 
+            <button class="btn btn-xs btn-success" (click)="setModalFields(true, stock.symbol, stock.quantity, stock.price)" 
               data-toggle="modal" data-target="#buyStockModal"><i title="Buy More" class="fa fa-plus-circle"></i>
             </button>
-            <button class="btn btn-xs btn-danger" (click)="setModalFields(false, stock.symbol, stock.quantity, stock.purchasePrice)"
+            <button class="btn btn-xs btn-danger" (click)="setModalFields(false, stock.symbol, stock.quantity, stock.price)"
               data-toggle="modal" data-target="#buyStockModal"><i title="Sell" class="fa fa-minus-circle"></i>
             </button>
           </td>
@@ -60,8 +59,6 @@
       <div class="modal-body">
         <label for="stockSymbol">Stock symbol:</label><input class="form-control" placeholder="(MSFT, GOOG, AAPL, etc.)" type="text" name="stockSymbol" [(ngModel)]="symbol"/>
         <label for="quantity">Quantity:</label><input class="form-control" placeholder="How many shares?" type="text" name="quantity" [(ngModel)]="quantity"/>
-        <label for="price">Price: $</label><input class="form-control" placeholder="Price" type="text" name="price" [(ngModel)]="price"/>
-        
       </div>
       <div class="modal-footer">
         <button type="button" id="closePortfolioModal" class="btn btn-default" data-dismiss="modal">Close</button>
