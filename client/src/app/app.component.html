@@ -20,7 +20,10 @@
           <a>Services</a>
           <ul class="nav-dropdown">
             <li>
-              <a routerLink="/quotesearch" routerLinkActive="active">Quote Search</a>
+              <a routerLink="/quotesearch" routerLinkActive="active" *ngIf="!isLoggedIn">Quote Search</a>
+            </li>
+            <li>
+              <a routerLink="/buystocks" routerLinkActive="active" *ngIf="isLoggedIn">Buy Stocks</a>
             </li>
             <li>
               <a routerLink="/user" routerLinkActive="active" *ngIf="isLoggedIn">Profile</a>
