@@ -16,7 +16,6 @@ import { StockDataItem } from '../StockDataItem';
   styleUrls: ['user.component.scss']
 })
 export class UserComponent implements OnInit {
-  TheUsers: UserItem[];
   searchResult: StockDataItem;
 
   buy: Boolean = true;
@@ -27,6 +26,9 @@ export class UserComponent implements OnInit {
   _id;
 
   portfolio: any = {};
+
+  user: FirebaseUserModel = new FirebaseUserModel();
+  profileForm: FormGroup;
 
   setModalFields(buy, stock?, qty?, price?) {
     this.buy = buy;
@@ -45,8 +47,7 @@ export class UserComponent implements OnInit {
   }
 
 
-  user: FirebaseUserModel = new FirebaseUserModel();subscribesubscribe
-  profileForm: FormGroup;
+  
 
   constructor(
     private myCrudService: CrudService,
