@@ -1,3 +1,30 @@
-<p>
-  buystocks works!
-</p>
+<div id="search-component" class="container-fluid">
+  <div class="form jumbotron">
+    <h4>Quote Search</h4>
+    <h5>Enter the symbol to get details</h5>
+    <div class="input-group">
+      <input type="text" class="form-control" [(ngModel)]="searchText" placeholder="symbol" #searchTerm />
+      <div class="input-group-append">
+        <button type="submit" (click)="getStock(searchTerm.value)" class="btn btn-primary">Quote Search</button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="searchResult" class="table-responsive ">
+    <table class="table table-striped col-xs-12">
+      <tbody>
+        <tr >
+          <th>Symbol</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th *ngIf="showChange">Change</th>
+        </tr>
+        <tr *ngFor="let eachStock of searchResult">
+          <th>{{eachStock.symbol}}</th>
+          <th>{{eachStock.name}}</th>
+          <th>{{eachStock.price}}</th>
+          <th *ngIf="showChange">{{eachStock.change_pct}}</th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
