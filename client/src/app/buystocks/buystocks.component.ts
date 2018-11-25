@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { MarketDataItem } from '../MarketDataItem';
 import { StockDataItem } from '../StockDataItem';
 import { StockService } from '../stock-service.service';
 import { UserService } from '../core/user.service';
@@ -8,7 +7,6 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FirebaseUserModel } from '../core/user.model';
-import { UserItem } from '../UserItem';
 import { CrudService } from '../crud-service.service';
 
 @Component({
