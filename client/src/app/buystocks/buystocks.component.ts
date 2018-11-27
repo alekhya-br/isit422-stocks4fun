@@ -53,6 +53,10 @@ export class BuystocksComponent {
   }
 
   buyStock() {
+    var newID = Object;
+    var newItem: OrderItem = { user_uid: this.user.uid, stock_symbol: this.stockSymbol, stock_name: this.stockName, stock_quantity: this.stockQuantity, stock_price: this.stockPrice, _id: newID };
+    this.myCrudService.insertOrder(newItem as OrderItem).subscribe();
+
     this.stockName = 'unknown';
     this.stockSymbol = 'unknown';
     this.stockPrice = 0.0;
