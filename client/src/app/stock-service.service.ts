@@ -22,12 +22,16 @@ export class StockService {
     return this.http.get<MarketDataItem[]>('http://localhost:3000/stock/api/market_data');
   }
 
-  getWinningStocks(): Observable<StockDataItem[]> {
-    return this.http.get<StockDataItem[]>('http://localhost:3000/stock/api/winning_stocks');
+  getDowJonesDividend(): Observable<StockDataItem[]> {
+    return this.http.get<StockDataItem[]>('http://localhost:3000/api/top_dowjones_dividend');
   }
 
-  getLosingStocks(): Observable<StockDataItem[]> {
-    return this.http.get<StockDataItem[]>('http://localhost:3000/stock/api/losing_stocks');
+  getSP500Dividend(): Observable<StockDataItem[]> {
+    return this.http.get<StockDataItem[]>('http://localhost:3000/api/top_sp500_dividend');
+  }
+
+  getNasdaqDividend(): Observable<StockDataItem[]> {
+    return this.http.get<StockDataItem[]>('http://localhost:3000/api/top_nasdaq_dividend');
   }
 
   searchQuotes(term: string): Observable<StockDataItem[]> {

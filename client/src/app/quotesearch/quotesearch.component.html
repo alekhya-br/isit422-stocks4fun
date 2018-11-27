@@ -9,14 +9,14 @@
       </div>
     </div>
   </div>
-  <div *ngIf="searchResult" class="table-responsive ">
+  <div *ngIf="searchResult" class="table-responsive">
     <table class="table table-striped col-xs-12">
       <tbody>
         <tr >
           <th>Symbol</th>
           <th>Name</th>
           <th>Price</th>
-          <th *ngIf="showChange">Change</th>
+          <th *ngIf="showChange">% Change</th>
         </tr>
         <tr *ngFor="let eachStock of searchResult">
           <th>{{eachStock.symbol}}</th>
