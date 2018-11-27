@@ -8,6 +8,7 @@ import { Location } from '@angular/common';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FirebaseUserModel } from '../core/user.model';
 import { CrudService } from '../crud-service.service';
+import { OrderItem } from '../OrderItem';
 
 @Component({
   selector: 'app-buystocks',
@@ -52,6 +53,19 @@ export class BuystocksComponent {
       }, err => console.log(err))
   }
 
+  TheOrders: OrderItem[];
+
+  selectedOrderItem: OrderItem;
+  selectedCrudItemPriorOrdername: string;
+
+  addNewOrder(iSymbol: string, iName: string, iQuantity: number, iPrice: number): void {
+    iSymbol = iSymbol.trim();
+    iName = iName.trim();
+    var newID = Object;
+    var newItem: OrderItem = { user_uid: this.user.uid, stock_symbol: iSymbol, stock_name: iName, stock_quantity: iQuantity, stock_price: iPrice, _id: newID };
+    this.myCrudService.insertOrder(newItem as OrderItem);
+  }
+
   ngOnInit(): void {
     this.route.data.subscribe(routeData => {
       let data = routeData['data'];
@@ -60,6 +74,7 @@ export class BuystocksComponent {
         this.createForm(this.user.name);
       }
     });
+    //this.getOrders();
   }
 
   constructor(
