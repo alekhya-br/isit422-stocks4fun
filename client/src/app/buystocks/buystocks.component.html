@@ -41,14 +41,42 @@
           <th>Name</th>
           <th>Price</th>
           <th *ngIf="showChange">Change</th>
+          <th>Buy</th>
         </tr>
         <tr *ngFor="let eachStock of searchResult">
-          <th>{{eachStock.symbol}}</th>
-          <th>{{eachStock.name}}</th>
-          <th>{{eachStock.price}}</th>
-          <th *ngIf="showChange">{{eachStock.change_pct}}</th>
+          <td>{{eachStock.symbol}}</td>
+          <td>{{eachStock.name}}</td>
+          <td>{{eachStock.price}}</td>
+          <td *ngIf="showChange">{{eachStock.change_pct}}</td>
+          <td>
+            <button class="btn btn-xs btn-success" (click)="setModalFields(eachStock.symbol, eachStock.price)" 
+            data-toggle="modal" data-target="#buyStockModal"><i title="Buy Stock" class="fa fa-plus-circle"></i>
+          </button>
+          </td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
+
+<div class="modal fade" id="buyStockModal" tabindex="-1" role="dialog" aria-labelledby="buyStockModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="buyStockModalLabel">Buy Stock</h4>
+        </div>
+        <div class="modal-body">
+          <label for="stockSymbol">Stock symbol: {{symbol}}</label>
+          <br/>
+          <label for="stockPrice">Price: {{price}}</label>
+          <br/>
+          <label for="stockQuantity">Quantity:</label><input class="form-control" placeholder="How many shares?" type="text" name="quantity" [(ngModel)]="quantity"/>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="closePortfolioModal" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" (click)="buyStock()" class="btn btn-primary" data-dismiss="modal">Buy</button>
+        </div>
+      </div>
+    </div>
+  </div>

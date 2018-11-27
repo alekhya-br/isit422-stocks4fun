@@ -23,9 +23,19 @@ export class BuystocksComponent {
   searchResult: StockDataItem[];
   showChange: boolean;
 
+  symbol = 'unknown';
+  price = 0.0;
+  quantity = 0;
+
 
   user: FirebaseUserModel = new FirebaseUserModel();
   profileForm: FormGroup;
+
+  setModalFields(symbol, price) {
+    this.symbol = symbol;
+    this.price = price;
+    console.log('setModalFields called');
+  }
 
   getStock(term: string): void {
     //const id = +this.route.snapshot.paramMap.get('id');
@@ -38,6 +48,13 @@ export class BuystocksComponent {
     })
     console.log('getStock called');
     // .subscribe(stocks => this.stocks = stocks);
+  }
+
+  buyStock() {
+    this.symbol = 'unknown';
+    this.price = 0.0;
+    this.quantity = 0;
+    alert("Successfully bought stocks.");
   }
 
   createForm(name) {
