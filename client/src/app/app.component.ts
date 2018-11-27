@@ -4,24 +4,37 @@ import * as firebase from 'firebase';
 import { Subject } from 'rxjs';
 import { AuthService } from './core/auth.service';
 import { Location } from '@angular/common';
-
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
-})
-export class AppComponent {
-  title = 'isit422-stocks4fun';
-  isLoggedIn;
-  public user: firebase.User;
 
+  selector: 'app-root',
+ 
+  templateUrl: './app.component.html',
+ 
+  styleUrls: ['./app.component.scss']
+ 
+ })
+ 
+ export class AppComponent {
+
+  title = 'isit422-stocks4fun';
+ 
+  isLoggedIn;
+ 
+  public user: firebase.User;  
   constructor(
+ 
     public authService: AuthService,
+ 
     private location: Location
+ 
   ) { }
+ 
   ngOnInit() {
+ 
     this.checkUser();
+ 
   }
+
   checkUser() {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
@@ -42,8 +55,7 @@ export class AppComponent {
       }, err => console.log(err))
   }
 }
-
-(function ($) {
+/*   (function ($) {
   $(function () {
     $('nav ul li > a:not(:only-child)').click(function (e) {
       $(this).siblings('.nav-dropdown').toggle();
@@ -60,4 +72,4 @@ export class AppComponent {
       $('nav ul').toggle();
     });
   });
-})(jQuery);
+})(jQuery);  */
