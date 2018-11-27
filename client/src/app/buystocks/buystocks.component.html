@@ -49,7 +49,7 @@
           <td>{{eachStock.price}}</td>
           <td *ngIf="showChange">{{eachStock.change_pct}}</td>
           <td>
-            <button class="btn btn-xs btn-success" (click)="setModalFields(eachStock.symbol, eachStock.price)" 
+            <button class="btn btn-xs btn-success" (click)="setModalFields(eachStock.symbol, eachStock.name, eachStock.price)" 
             data-toggle="modal" data-target="#buyStockModal"><i title="Buy Stock" class="fa fa-plus-circle"></i>
           </button>
           </td>
@@ -67,11 +67,13 @@
           <h4 class="modal-title" id="buyStockModalLabel">Buy Stock</h4>
         </div>
         <div class="modal-body">
-          <label for="stockSymbol">Stock symbol: {{symbol}}</label>
+          <label for="stockSymbol">Stock symbol: {{stockSymbol}}</label>
           <br/>
-          <label for="stockPrice">Price: {{price}}</label>
+          <label for="stockName">Stock name: {{stockName}}</label>
           <br/>
-          <label for="stockQuantity">Quantity:</label><input class="form-control" placeholder="How many shares?" type="text" name="quantity" [(ngModel)]="quantity"/>
+          <label for="stockPrice">Price: {{stockPrice}}</label>
+          <br/>
+          <label for="stockQuantity">Quantity:</label><input class="form-control" placeholder="How many shares?" type="text" name="quantity" [(ngModel)]="stockQuantity"/>
         </div>
         <div class="modal-footer">
           <button type="button" id="closePortfolioModal" class="btn btn-default" data-dismiss="modal">Close</button>

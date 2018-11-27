@@ -22,18 +22,20 @@ export class BuystocksComponent {
   searchText: string = 'TSLA';
   searchResult: StockDataItem[];
   showChange: boolean;
-
-  symbol = 'unknown';
-  price = 0.0;
-  quantity = 0;
+  
+  stockSymbol = 'unknown';
+  stockName = 'unknown';
+  stockPrice = 0.0;
+  stockQuantity = 0;
 
 
   user: FirebaseUserModel = new FirebaseUserModel();
   profileForm: FormGroup;
 
-  setModalFields(symbol, price) {
-    this.symbol = symbol;
-    this.price = price;
+  setModalFields(stockSymbol, stockName, stockPrice) {
+    this.stockSymbol = stockSymbol;
+    this.stockName = stockName;
+    this.stockPrice = stockPrice;
     console.log('setModalFields called');
   }
 
@@ -51,9 +53,10 @@ export class BuystocksComponent {
   }
 
   buyStock() {
-    this.symbol = 'unknown';
-    this.price = 0.0;
-    this.quantity = 0;
+    this.stockName = 'unknown';
+    this.stockSymbol = 'unknown';
+    this.stockPrice = 0.0;
+    this.stockQuantity = 0;
     alert("Successfully bought stocks.");
   }
 
