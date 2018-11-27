@@ -23,25 +23,27 @@
 </div>
 
 <div class="col-md-8 col-md-offset-2">
-  <h3>Manage Portfolio: {{portfolio.type}}</h3>
-
-  <button class="btn btn-primary" (click)="setModalFields(true)" data-toggle="modal" data-target="#buyStockModal">Buy Stocks</button>
+  <h3>{{user.name}}'s Portfolio:</h3>
 
   <table class="table table-bordered">
       <thead>
-        <tr><th>Stock</th><th>Quantity</th><th>Purchase Price</th><th>Actions</th></tr>
+        <tr>
+          <th>Symbol</th>
+          <th>Name</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Sell</th>
+        </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let stock of portfolio.stocks">
-          <td>{{stock.symbol}}</td>
-          <td>{{stock.quantity}}</td>
-          <td style="text-align:right"><strong>$ {{stock.price | number:'1.2-2'}}</strong></td>
+        <tr *ngFor="let eachOrder of theOrders">
+          <td>{{eachOrder.stock_symbol}}</td>
+          <td>{{eachOrder.stock_name}}</td>
+          <td>{{eachOrder.stock_quantity}}</td>
+          <td style="text-align:right"><strong>$ {{eachOrder.stock_price | number:'1.2-2'}}</strong></td>
           <td>
-            <button class="btn btn-xs btn-success" (click)="setModalFields(true, stock.symbol, stock.quantity, stock.price)" 
-              data-toggle="modal" data-target="#buyStockModal"><i title="Buy More" class="fa fa-plus-circle"></i>
-            </button>
-            <button class="btn btn-xs btn-danger" (click)="setModalFields(false, stock.symbol, stock.quantity, stock.price)"
-              data-toggle="modal" data-target="#buyStockModal"><i title="Sell" class="fa fa-minus-circle"></i>
+            <button class="btn btn-xs btn-danger" (click)="setModalFields(eachOrder.stock_symbol, eachOrder.stock_name, eachOrder.stock_quantity, eachOrder.stock_price)"
+              data-toggle="modal" data-target="#sellStockModal"><i title="Sell" class="fa fa-minus-circle"></i>
             </button>
           </td>
         </tr>
@@ -50,22 +52,27 @@
 
 </div>
 
-<div class="modal fade" id="buyStockModal" tabindex="-1" role="dialog" aria-labelledby="buyStockModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="buyStockModalLabel">{{buy ? "Buy" : "Sell"}} stock</h4>
-      </div>
-      <div class="modal-body">
-        <label for="stockSymbol">Stock symbol:</label><input class="form-control" placeholder="(MSFT, GOOG, AAPL, etc.)" type="text" name="stockSymbol" [(ngModel)]="symbol"/>
-        <label for="quantity">Quantity:</label><input class="form-control" placeholder="How many shares?" type="text" name="quantity" [(ngModel)]="quantity"/>
-      </div>
-      <div class="modal-footer">
-        <button type="button" id="closePortfolioModal" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" (click)="buyOrSellStock()" class="btn btn-primary" data-dismiss="modal">{{buy ? "Buy" : "Sell"}}</button>
+<div class="modal fade" id="sellStockModal" tabindex="-1" role="dialog" aria-labelledby="sellStockModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="sellStockModalLabel">Sell Stock</h4>
+        </div>
+        <div class="modal-body">
+          <label for="stockSymbol">Stock symbol: {{stockSymbol}}</label>
+          <br/>
+          <label for="stockName">Stock name: {{stockName}}</label>
+          <br/>
+          <label for="stockPrice">Price: {{stockPrice}}</label>
+          <br/>
+          <label for="stockQuantity">Quantity:</label><input class="form-control" placeholder="How many shares?" type="text" name="quantity" [(ngModel)]="stockQuantity"/>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="closePortfolioModal" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" (click)="sellStock()" class="btn btn-primary" data-dismiss="modal">Sell</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
