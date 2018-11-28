@@ -32,6 +32,10 @@ export class CrudService {
     return this.http.get<OrderItem[]>('http://localhost:3000/order/api/order_data/');
   }
 
+  getUserOrders(uid: string): Observable<OrderItem[]> {
+    return this.http.get<OrderItem[]>('http://localhost:3000/order/api/order_data/' + uid);
+  }
+
   insertOrder(newOrder: OrderItem): Observable<OrderItem> {
     return this.http.post<OrderItem>('http://localhost:3000/order/api/order_data/', newOrder);
   }

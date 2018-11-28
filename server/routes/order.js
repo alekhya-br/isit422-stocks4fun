@@ -52,6 +52,20 @@ router.get('/api/order_data', function (req, res) {
     })
 });
 
+router.get('/api/order_data/:id', function (req, res) {
+    mongoose.connect(conString, () => {    // like SQL, we first connect, then issue cmds
+        orders.find({user_uid: req.params.id}, function (err, docs) {  // find({} gets all, docs is the name of the return json
+            var oneOrderArray = [];  // our new array we will return instead of TODOS array
+            if (!err) {
+                docs.forEach(function (oneOrder, index) {  // fill up our array from mongodb's json
+                    oneOrderArray[index] = oneOrder;    // oneOrder is temp variable, like item in a C# foreach
+                });
+                res.send(oneOrderArray);  // return our array
+            } else { res.sendStatus(500); }  // something bad happened, send a server error http code
+        });
+    })
+});
+
 
 router.post('/api/order_data', function (req, res) {
     try {

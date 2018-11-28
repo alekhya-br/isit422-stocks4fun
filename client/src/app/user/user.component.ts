@@ -65,9 +65,9 @@ export class UserComponent implements OnInit {
   }
 
   getOrders(): void {
-    this.myCrudService.getAllOrders().subscribe((OrderData: OrderItem[]) => {
+    this.myCrudService.getUserOrders(this.user.uid).subscribe((OrderData: OrderItem[]) => {
       this.theOrders = OrderData;
-      console.log("return from getAllOrders");
+      console.log("return from getOrders");
       console.log("TheOrders size is " + this.theOrders.length);
     });
     console.log("get orders called");
