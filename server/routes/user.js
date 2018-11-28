@@ -25,8 +25,8 @@ var mongousers = mongoose.model("mongousers", {
 })
 
 var UserObject = {
-    username: "blah",
-    password: "bark",
+    firstname: "blah",
+    lastname: "bark",
     username: "whatever",
     password: "code will overwrite",
     _id: Object

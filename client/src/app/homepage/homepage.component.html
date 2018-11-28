@@ -1,59 +1,87 @@
-<section id="marketChart">
+<section>
   <h2>Market Stocks</h2>
-  <div *ngIf="apiMarketData">
-    <table class="marketClass">
-      <tr class="marketTr">
-        <th class="marketTh">Symbol</th>
-        <th class="marketTh">Name</th>
-        <th class="marketTh">Price</th>
-        <th class="marketTh">% Change</th>
-      </tr>
-      <tr id="testMarket" class="marketTr" *ngFor="let eachMarket of apiMarketData">
-        <th class="marketTh">{{eachMarket.symbol}}</th>
-        <th class="marketTh">{{eachMarket.name}}</th>
-        <th class="marketTh">{{eachMarket.price}}</th>
-        <th class="marketTh">{{eachMarket.change_pct}}</th>
-      </tr>
+  <div *ngIf="apiMarketData" class="table-responsive">
+    <table class="table table-striped col-xs-12">
+      <tbody>
+        <tr>
+          <th>Symbol</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th *ngIf="showChange">% Change</th>
+        </tr>
+        <tr id="testMarket" *ngFor="let eachMarket of apiMarketData">
+          <th>{{eachMarket.symbol}}</th>
+          <th>{{eachMarket.name}}</th>
+          <th>{{eachMarket.price}}</th>
+          <th *ngIf="showChange">{{eachMarket.change_pct}}</th>
+        </tr>
+      </tbody>
     </table>
   </div>
 </section>
-<hr/>
-<section id="winningStocksChart">
-  <h2>Top Winning Stocks</h2>
-  <div *ngIf="winningStocks">
-    <table class="winningStocksClass">
-      <tr class="winningStocksTr">
-        <th class="winningStocksTh">Symbol</th>
-        <th class="winningStocksTh">Name</th>
-        <th class="winningStocksTh">Price</th>
-        <th class="winningStocksTh">Change</th>
-      </tr>
-      <tr class="winningStocksTr" *ngFor="let eachStock of winningStocks">
-        <th class="winningStocksTh">{{eachStock.symbol}}</th>
-        <th class="winningStocksTh">{{eachStock.name}}</th>
-        <th class="winningStocksTh">{{eachStock.price}}</th>
-        <th class="winningStocksTh">{{eachStock.change_pct}}</th>
-      </tr>
+<hr />
+<section>
+  <h2>Top Dow Jones Dividend Stocks</h2>
+  <div *ngIf="dowJonesStocks" class="table-responsive">
+    <table class="table table-striped col-xs-12">
+      <tbody>
+        <tr>
+          <th>Symbol</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th *ngIf="showChange">% Change</th>
+        </tr>
+        <tr *ngFor="let eachStock of dowJonesStocks">
+          <th>{{eachStock.symbol}}</th>
+          <th>{{eachStock.name}}</th>
+          <th>{{eachStock.price}}</th>
+          <th *ngIf="showChange">{{eachStock.change_pct}}</th>
+        </tr>
+      </tbody>
     </table>
   </div>
 </section>
-<br/>
-<section id="losingStocksChart">
-  <h2>Top Losing Stocks</h2>
-  <div *ngIf="losingStocks">
-    <table class="losingStocksClass">
-      <tr class="losingStocksTr">
-        <th class="losingStocksTh">Symbol</th>
-        <th class="losingStocksTh">Name</th>
-        <th class="losingStocksTh">Price</th>
-        <th class="losingStocksTh">Change</th>
-      </tr>
-      <tr class="losingStocksTr" *ngFor="let eachStock of losingStocks">
-        <th class="losingStocksTh">{{eachStock.symbol}}</th>
-        <th class="losingStocksTh">{{eachStock.name}}</th>
-        <th class="losingStocksTh">{{eachStock.price}}</th>
-        <th class="losingStocksTh">{{eachStock.change_pct}}</th>
-      </tr>
+<br />
+<section>
+  <h2>Top S&P 500 Dividend Stocks</h2>
+  <div *ngIf="sp500Stocks" class="table-responsive">
+    <table class="table table-striped col-xs-12">
+      <tbody>
+        <tr>
+          <th>Symbol</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th *ngIf="showChange">% Change</th>
+        </tr>
+        <tr *ngFor="let eachStock of sp500Stocks">
+          <th>{{eachStock.symbol}}</th>
+          <th>{{eachStock.name}}</th>
+          <th>{{eachStock.price}}</th>
+          <th *ngIf="showChange">{{eachStock.change_pct}}</th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<br />
+<section>
+  <h2>Top Nasdaq Dividend Stocks</h2>
+  <div *ngIf="nasdaqStocks" class="table-responsive">
+    <table class="table table-striped col-xs-12">
+      <tbody>
+        <tr>
+          <th>Symbol</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th *ngIf="showChange">% Change</th>
+        </tr>
+        <tr *ngFor="let eachStock of nasdaqStocks">
+          <th>{{eachStock.symbol}}</th>
+          <th>{{eachStock.name}}</th>
+          <th>{{eachStock.price}}</th>
+          <th *ngIf="showChange">{{eachStock.change_pct}}</th>
+        </tr>
+      </tbody>
     </table>
   </div>
 </section>

@@ -14,12 +14,16 @@ export class HomepageComponent implements OnInit {
 
   apiMarketData: MarketDataItem[];
   marketData: MarketDataItem[];
-  winningStocks: StockDataItem[];
-  losingStocks: StockDataItem[];
+  dowJonesStocks: StockDataItem[];
+  sp500Stocks: StockDataItem[];
+  nasdaqStocks: StockDataItem[];
+  showChange: boolean;
 
   getApiMarketData(): void {
     this.myStockService.getApiMarketData().subscribe((apiMarketData: MarketDataItem[]) => {
+      // const showChange = apiMarketData.findIndex(w => w.change_pct !== undefined) >= 0;
       this.apiMarketData = apiMarketData;
+      // this.showChange = showChange;
     })
   }
 
@@ -29,15 +33,27 @@ export class HomepageComponent implements OnInit {
     })
   }
 
-  getWinningStocks(): void {
-    this.myStockService.getWinningStocks().subscribe((winningStocks: StockDataItem[]) => {
-      this.winningStocks = winningStocks;
+  getDowJonesStocks(): void {
+    this.myStockService.getDowJonesDividend().subscribe((dowJonesStocks: StockDataItem[]) => {
+      // const showChange = dowJonesStocks.findIndex(w => w.change_pct !== undefined) >= 0;
+      this.dowJonesStocks = dowJonesStocks;
+      // this.showChange = showChange;
     })
   }
 
-  getLosingStocks(): void {
-    this.myStockService.getLosingStocks().subscribe((losingStocks: StockDataItem[]) => {
-      this.losingStocks = losingStocks;
+  getSP500Stocks(): void {
+    this.myStockService.getSP500Dividend().subscribe((sp500Stocks: StockDataItem[]) => {
+      // const showChange = sp500Stocks.findIndex(w => w.change_pct !== undefined) >= 0;
+      this.sp500Stocks = sp500Stocks;
+      // this.showChange = showChange;
+    })
+  }
+
+  getNasdaqStocks(): void {
+    this.myStockService.getNasdaqDividend().subscribe((nasdaqStocks: StockDataItem[]) => {
+      // const showChange = nasdaqStocks.findIndex(w => w.change_pct !== undefined) >= 0;
+      this.nasdaqStocks = nasdaqStocks;
+      // this.showChange = showChange;
     })
   }
 
@@ -47,8 +63,9 @@ export class HomepageComponent implements OnInit {
 
   ngOnInit() {
     this.getApiMarketData();
-    this.getWinningStocks();
-    this.getLosingStocks();
+    this.getDowJonesStocks();
+    this.getSP500Stocks();
+    this.getNasdaqStocks();
   }
 
 }

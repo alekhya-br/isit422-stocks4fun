@@ -5,10 +5,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FirebaseUserModel } from '../core/user.model';
-import { UserItem } from '../UserItem';
+import { OrderItem } from '../OrderItem';
 import { CrudService } from '../crud-service.service';
-import { StockService } from '../stock-service.service';
-import { StockDataItem } from '../StockDataItem';
 
 @Component({
   selector: 'page-user',
@@ -16,37 +14,24 @@ import { StockDataItem } from '../StockDataItem';
   styleUrls: ['user.component.scss']
 })
 export class UserComponent implements OnInit {
-  TheUsers: UserItem[];
-  searchResult: StockDataItem;
 
-  buy: Boolean = true;
-  symbol: string;
-  quantity: number;
-  price: number;
+  theOrders: OrderItem[];
 
-  _id;
-
-  portfolio: any = {};
-
-  setModalFields(buy, stock?, qty?, price?) {
-    this.buy = buy;
-    this.symbol = stock;
-    this.quantity = qty;
-    this.price = price;
-  }
-
-  buyOrSellStock() {
-    this.myStockService.searchDummyQuotes(this.symbol).subscribe((searchResult: StockDataItem) => {
-      this.searchResult = searchResult;
-    });
-    this.myCrudService.buySellStock(this.portfolio, this._id, this.symbol, this.buy ? this.quantity : -this.quantity , this.searchResult.price).subscribe((res) => {
-        alert("Successfully bought/sold stocks.");
-      });
-  }
+  stockSymbol = 'unknown';
+  stockName = 'unknown';
+  stockPrice = 0.0;
+  stockQuantity = 0;
 
 
-  user: FirebaseUserModel = new FirebaseUserModel();subscribesubscribe
+  user: FirebaseUserModel = new FirebaseUserModel();
   profileForm: FormGroup;
+
+  setModalFields(stockSymbol, stockName, stockPrice) {
+    this.stockSymbol = stockSymbol;
+    this.stockName = stockName;
+    this.stockPrice = stockPrice;
+    console.log('setModalFields called');
+  }
 
   constructor(
     private myCrudService: CrudService,
@@ -54,8 +39,7 @@ export class UserComponent implements OnInit {
     public authService: AuthService,
     private route: ActivatedRoute,
     private location: Location,
-    private fb: FormBuilder,
-    private myStockService: StockService
+    private fb: FormBuilder
   ) {
 
   }
@@ -67,12 +51,27 @@ export class UserComponent implements OnInit {
         this.user = data;
         this.createForm(this.user.name);
       }
-    }),
-    this._id = this.route.snapshot.paramMap.get('id');
-    console.log("Getting portfolio: " + this._id);
-    this.myCrudService.getPortfolio(this._id).subscribe((UserData: UserItem[]) => {
-      this.portfolio = UserData;
     });
+    this.getOrders();
+  }
+
+  sellStock() {
+
+    this.stockName = 'unknown';
+    this.stockSymbol = 'unknown';
+    this.stockPrice = 0.0;
+    this.stockQuantity = 0;
+    alert("Successfully sold stocks.");
+  }
+
+  getOrders(): void {
+    this.myCrudService.getUserOrders(this.user.uid).subscribe((OrderData: OrderItem[]) => {
+      this.theOrders = OrderData;
+      console.log("return from getOrders");
+      console.log("TheOrders size is " + this.theOrders.length);
+    });
+    console.log("get orders called");
+    //console.log("TheOrders size is " + this.TheOrders.length);
   }
 
   createForm(name) {
