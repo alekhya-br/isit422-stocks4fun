@@ -55,7 +55,8 @@ import { Location } from '@angular/common';
       }, err => console.log(err))
   }
 }
-/*   (function ($) {
+
+(function ($) {
   $(function () {
     $('nav ul li > a:not(:only-child)').click(function (e) {
       $(this).siblings('.nav-dropdown').toggle();
@@ -72,4 +73,4 @@ import { Location } from '@angular/common';
       $('nav ul').toggle();
     });
   });
-})(jQuery);  */
+})(jQuery);
