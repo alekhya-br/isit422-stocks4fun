@@ -1,10 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { UserItem } from './UserItem';
 import { OrderItem } from './OrderItem';
-import { MarketDataItem } from './MarketDataItem';
-import { StockDataItem } from './StockDataItem';
 
 @Injectable({ providedIn: 'root' })
 export class CrudService {

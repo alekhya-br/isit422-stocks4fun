@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import * as firebase from 'firebase';
-import { Subject } from 'rxjs';
 import { AuthService } from './core/auth.service';
 import { Location } from '@angular/common';
 @Component({
