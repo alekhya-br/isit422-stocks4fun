@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { BuystocksComponent } from './buystocks.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { UserService } from '../core/user.service';
+import { AngularFirestore } from 'angularfire2/firestore';
 
 describe('BuystocksComponent', () => {
   let component: BuystocksComponent;
@@ -8,9 +11,11 @@ describe('BuystocksComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BuystocksComponent ]
+      imports: [FormsModule, HttpClientModule],
+      declarations: [BuystocksComponent],
+      providers: [UserService, AngularFirestore]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

@@ -19,22 +19,6 @@ describe('StockService', () => {
     const service: StockService = TestBed.get(StockService);
     expect(service).toBeTruthy();
   });
-
-  it('retrieves all the market indexes', () => {
-    //const service: CatService = TestBed.get(CatService);
-    const service: StockService = TestBed.get(StockService);
-      result => expect(service.getApiMarketData.length).toBeGreaterThan(0);
-    }); 
-
-  it('retrieves top DowJonesStocks stocks', () =>{
-    const service: StockService = TestBed.get(StockService);
-      result => expect(service.getDowJonesDividend.length).toBeGreaterThan(0);
-    }); 
-
-  it('retrievest top SP500Stocks stocks', () => {
-    const service: StockService = TestBed.get(StockService);
-      result => expect(service.getSP500Dividend.length).toBeGreaterThan(0);
-    });
   
   it('search quote should return real data', (done) => {
     let stockData: StockDataItem[];
