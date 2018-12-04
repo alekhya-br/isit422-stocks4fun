@@ -16,6 +16,7 @@ export class UserComponent implements OnInit {
 
   theOrders: OrderItem[];
 
+  stockID = 0;
   stockSymbol = 'unknown';
   stockName = 'unknown';
   stockPrice = 0.0;
@@ -25,9 +26,11 @@ export class UserComponent implements OnInit {
   user: FirebaseUserModel = new FirebaseUserModel();
   profileForm: FormGroup;
 
-  setModalFields(stockSymbol, stockName, stockPrice) {
+  setModalFields(stockID, stockSymbol, stockName, stockQuantity, stockPrice) {
+    this.stockID = stockID;
     this.stockSymbol = stockSymbol;
     this.stockName = stockName;
+    this.stockQuantity = stockQuantity;
     this.stockPrice = stockPrice;
     console.log('setModalFields called');
   }
@@ -53,13 +56,13 @@ export class UserComponent implements OnInit {
     this.getOrders();
   }
 
-  sellStock() {
-
+  sellStock(sellQuantity: number) {
+    this.stockID = 0;
     this.stockName = 'unknown';
     this.stockSymbol = 'unknown';
     this.stockPrice = 0.0;
     this.stockQuantity = 0;
-    alert("Successfully sold stocks.");
+    alert("Successfully sold " + sellQuantity + " stocks.");
   }
 
   getOrders(): void {

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
   <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/stock-service.service.spec.ts">
-    <testCase name="StockService should be created" duration="163"/>
-    <testCase name="StockService retrieves all the market indexes" duration="46"/>
-    <testCase name="StockService retrieves top DowJonesStocks stocks" duration="35"/>
-    <testCase name="StockService retrievest top SP500Stocks stocks" duration="35"/>
-    <testCase name="StockService search quote should return real data" duration="213">
+    <testCase name="StockService should be created" duration="85"/>
+    <testCase name="StockService retrieves all the market indexes" duration="48"/>
+    <testCase name="StockService retrieves top DowJonesStocks stocks" duration="20"/>
+    <testCase name="StockService retrievest top SP500Stocks stocks" duration="20"/>
+    <testCase name="StockService search quote should return real data" duration="101">
       <failure message="HttpErrorResponse: Http failure response for (unknown url): 0 Unknown Error"><![CDATA[HttpErrorResponse: Http failure response for (unknown url): 0 Unknown Error
 
 
@@ -44,37 +44,28 @@
   <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/app.component.spec.ts">
   </file>
   <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/homepage/homepage.component.spec.ts">
-    <testCase name="HomepageComponent should create" duration="563"/>
-    <testCase name="HomepageComponent should display market data" duration="404"/>
+    <testCase name="HomepageComponent should create" duration="282"/>
+    <testCase name="HomepageComponent should display market data" duration="179"/>
   </file>
   <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/quotesearch/quotesearch.component.spec.ts">
-    <testCase name="QuotesearchComponent should create" duration="277"/>
-    <testCase name="QuotesearchComponent should call getStock" duration="855"/>
-  </file>
-  <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/marketperformance/marketperformance.component.spec.ts">
-    <testCase name="MarketperformanceComponent should create" duration="95"/>
+    <testCase name="QuotesearchComponent should create" duration="150"/>
+    <testCase name="QuotesearchComponent should call getStock" duration="120"/>
   </file>
   <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/page-not-found/page-not-found.component.spec.ts">
-    <testCase name="PageNotFoundComponent should create" duration="122"/>
+    <testCase name="PageNotFoundComponent should create" duration="70"/>
   </file>
   <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/buystocks/buystocks.component.spec.ts">
-    <testCase name="BuystocksComponent should create" duration="3700">
+    <testCase name="BuystocksComponent should create" duration="1301">
       <failure message="Error: Template parse errors:"><![CDATA[Error: Template parse errors:
-Can't bind to 'formGroup' since it isn't a known property of 'form'. ("
-        </div>
-        <div *ngIf='user.provider == "password"' class="card-body">
-          <form [ERROR ->][formGroup]="profileForm">
-            <div class="form-group">
-              <label>Your name</label"): ng:///DynamicTestModule/BuystocksComponent.html@11:16
 Can't bind to 'ngModel' since it isn't a known property of 'input'. ("bol to get details</h5>
     <div class="input-group">
       <input type="text" class="form-control" [ERROR ->][(ngModel)]="searchText" placeholder="symbol" #searchTerm />
       <div class="input-group-append">
- "): ng:///DynamicTestModule/BuystocksComponent.html@29:46
+ "): ng:///DynamicTestModule/BuystocksComponent.html@5:46
 Can't bind to 'ngModel' since it isn't a known property of 'input'. ("tity:</label><input class="form-control" placeholder="How many shares?" type="text" name="quantity" [ERROR ->][(ngModel)]="stockQuantity"/>
         </div>
         <div class="modal-footer">
-"): ng:///DynamicTestModule/BuystocksComponent.html@77:141
+"): ng:///DynamicTestModule/BuystocksComponent.html@53:141
     at syntaxError (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:100:17)
     at TemplateParser.Object.<anonymous>.TemplateParser.parse (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/template_parser/template_parser.ts:106:13)
     at JitCompiler.Object.<anonymous>.JitCompiler._parseTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:297:33)
@@ -109,21 +100,15 @@ Can't bind to 'ngModel' since it isn't a known property of 'input'. ("tity:</lab
     at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
     at <anonymous>]]></failure>
       <failure message="Error: Template parse errors:"><![CDATA[Error: Template parse errors:
-Can't bind to 'formGroup' since it isn't a known property of 'form'. ("
-        </div>
-        <div *ngIf='user.provider == "password"' class="card-body">
-          <form [ERROR ->][formGroup]="profileForm">
-            <div class="form-group">
-              <label>Your name</label"): ng:///DynamicTestModule/BuystocksComponent.html@11:16
 Can't bind to 'ngModel' since it isn't a known property of 'input'. ("bol to get details</h5>
     <div class="input-group">
       <input type="text" class="form-control" [ERROR ->][(ngModel)]="searchText" placeholder="symbol" #searchTerm />
       <div class="input-group-append">
- "): ng:///DynamicTestModule/BuystocksComponent.html@29:46
+ "): ng:///DynamicTestModule/BuystocksComponent.html@5:46
 Can't bind to 'ngModel' since it isn't a known property of 'input'. ("tity:</label><input class="form-control" placeholder="How many shares?" type="text" name="quantity" [ERROR ->][(ngModel)]="stockQuantity"/>
         </div>
         <div class="modal-footer">
-"): ng:///DynamicTestModule/BuystocksComponent.html@77:141
+"): ng:///DynamicTestModule/BuystocksComponent.html@53:141
     at syntaxError (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:100:17)
     at TemplateParser.Object.<anonymous>.TemplateParser.parse (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/template_parser/template_parser.ts:106:13)
     at JitCompiler.Object.<anonymous>.JitCompiler._parseTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:297:33)
@@ -170,10 +155,10 @@ Received: undefined
     </testCase>
   </file>
   <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/messages/messages.component.spec.ts">
-    <testCase name="MessagesComponent should create" duration="130"/>
+    <testCase name="MessagesComponent should create" duration="91"/>
   </file>
   <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/sign-up/sign-up.component.spec.ts">
-    <testCase name="SignUpComponent should create" duration="4105">
+    <testCase name="SignUpComponent should create" duration="1221">
       <failure message="Error: Template parse errors:"><![CDATA[Error: Template parse errors:
 Can't bind to 'formGroup' since it isn't a known property of 'form'. ("
   <div class="row">
@@ -269,7 +254,7 @@ Received: undefined
     </testCase>
   </file>
   <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/login/login.component.spec.ts">
-    <testCase name="LoginComponent should create" duration="6773">
+    <testCase name="LoginComponent should create" duration="1456">
       <failure message="Error: Template parse errors:"><![CDATA[Error: Template parse errors:
 Can't bind to 'formGroup' since it isn't a known property of 'form'. ("
   <div class="row">
@@ -365,18 +350,12 @@ Received: undefined
     </testCase>
   </file>
   <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/user/user.component.spec.ts">
-    <testCase name="UserComponent should create" duration="4898">
+    <testCase name="UserComponent should create" duration="1100">
       <failure message="Error: Template parse errors:"><![CDATA[Error: Template parse errors:
-Can't bind to 'formGroup' since it isn't a known property of 'form'. ("
-        </div>
-        <div *ngIf='user.provider == "password"' class="card-body">
-          <form [ERROR ->][formGroup]="profileForm">
-            <div class="form-group">
-              <label>Your name</label"): ng:///DynamicTestModule/UserComponent.html@11:16
 Can't bind to 'ngModel' since it isn't a known property of 'input'. ("tity:</label><input class="form-control" placeholder="How many shares?" type="text" name="quantity" [ERROR ->][(ngModel)]="stockQuantity"/>
         </div>
         <div class="modal-footer">
-"): ng:///DynamicTestModule/UserComponent.html@68:141
+"): ng:///DynamicTestModule/UserComponent.html@44:141
     at syntaxError (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:100:17)
     at TemplateParser.Object.<anonymous>.TemplateParser.parse (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/template_parser/template_parser.ts:106:13)
     at JitCompiler.Object.<anonymous>.JitCompiler._parseTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:297:33)
@@ -411,16 +390,10 @@ Can't bind to 'ngModel' since it isn't a known property of 'input'. ("tity:</lab
     at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
     at <anonymous>]]></failure>
       <failure message="Error: Template parse errors:"><![CDATA[Error: Template parse errors:
-Can't bind to 'formGroup' since it isn't a known property of 'form'. ("
-        </div>
-        <div *ngIf='user.provider == "password"' class="card-body">
-          <form [ERROR ->][formGroup]="profileForm">
-            <div class="form-group">
-              <label>Your name</label"): ng:///DynamicTestModule/UserComponent.html@11:16
 Can't bind to 'ngModel' since it isn't a known property of 'input'. ("tity:</label><input class="form-control" placeholder="How many shares?" type="text" name="quantity" [ERROR ->][(ngModel)]="stockQuantity"/>
         </div>
         <div class="modal-footer">
-"): ng:///DynamicTestModule/UserComponent.html@68:141
+"): ng:///DynamicTestModule/UserComponent.html@44:141
     at syntaxError (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:100:17)
     at TemplateParser.Object.<anonymous>.TemplateParser.parse (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/template_parser/template_parser.ts:106:13)
     at JitCompiler.Object.<anonymous>.JitCompiler._parseTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:297:33)
@@ -467,7 +440,7 @@ Received: undefined
     </testCase>
   </file>
   <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/crud-service.service.spec.ts">
-    <testCase name="CrudService should be created" duration="1988">
+    <testCase name="CrudService should be created" duration="542">
       <failure message="Error: StaticInjectorError(DynamicTestModule)[HttpClient]: "><![CDATA[Error: StaticInjectorError(DynamicTestModule)[HttpClient]: 
   StaticInjectorError(Platform: core)[HttpClient]: 
     NullInjectorError: No provider for HttpClient!
