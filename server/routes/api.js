@@ -6,80 +6,113 @@ var newTopDowJonesStockData;
 var newTopSP500StockData;
 var newTopNasdaqStockData;
 
+var apiKey = 'blK2al6s1MJSKerohCmdAPJ65UK6IfuoYaN1tqh6Mjz2tZjNMJ3TtVAKy5Kb';
 
 router.get('/market_data', function (req, res) {
-    request("https://www.worldtradingdata.com/api/v1/stock?symbol=^DJI,^IXIC,^INX&api_token=3VNuBxaRu4pkkxsJk9cGPCwbOaiiTFLaDrOvyXBNtSQqULQnnqn3fjca6eQu", function (error, res, body) {
-        var content = JSON.parse(body).data;
-        console.log("errors: ", error);
-        console.log("statusCode: ", res && res.statusCode);
-        console.log("JSON: ", content);
+    request("https://www.worldtradingdata.com/api/v1/stock?",
+        {
+            qs: {
+                symbol: '^DJI,^IXIC,^INX',
+                api_token: apiKey
+            },
+            method: 'get'
+        }, function (error, res, body) {
+            var content = JSON.parse(body).data;
+            console.log("errors: ", error);
+            console.log("statusCode: ", res && res.statusCode);
+            console.log("JSON: ", content);
 
-        newMarketData = content.map(rawData => ({
-            symbol: rawData.symbol,
-            name: rawData.name,
-            price: rawData.price,
-            change_pct: rawData.change_pct
-        }))
+            newMarketData = content.map(rawData => ({
+                symbol: rawData.symbol,
+                name: rawData.name,
+                price: rawData.price,
+                change_pct: rawData.change_pct
+            }))
 
-        console.log("Filtered: ", newMarketData);
-    });
+            console.log("Filtered: ", newMarketData);
+        });
     res.send(newMarketData);
 });
 
 router.get('/top_dowjones_dividend', function (req, res) {
-    request("https://www.worldtradingdata.com/api/v1/stock?symbol=VZ,XOM,CVX,IBM,PFE&sort_order=asc&api_token=3VNuBxaRu4pkkxsJk9cGPCwbOaiiTFLaDrOvyXBNtSQqULQnnqn3fjca6eQu", function (error, res, body) {
-        var content = JSON.parse(body).data;
-        console.log("errors: ", error);
-        console.log("statusCode: ", res && res.statusCode);
-        console.log("JSON: ", content);
+    request("https://www.worldtradingdata.com/api/v1/stock?",
+        {
+            qs: {
+                symbol: 'VZ,XOM,CVX,IBM,PFE',
+                sort_order: 'asc',
+                api_token: apiKey
+            },
+            method: 'get'
+        }, function (error, res, body) {
+            var content = JSON.parse(body).data;
+            console.log("errors: ", error);
+            console.log("statusCode: ", res && res.statusCode);
+            console.log("JSON: ", content);
 
-        newTopDowJonesStockData = content.map(rawData => ({
-            symbol: rawData.symbol,
-            name: rawData.name,
-            price: rawData.price,
-            change_pct: rawData.change_pct
-        }))
+            newTopDowJonesStockData = content.map(rawData => ({
+                symbol: rawData.symbol,
+                name: rawData.name,
+                price: rawData.price,
+                change_pct: rawData.change_pct
+            }))
 
-        console.log("Filtered: ", newTopDowJonesStockData);
-    });
+            console.log("Filtered: ", newTopDowJonesStockData);
+        });
     res.send(newTopDowJonesStockData);
 });
 
 router.get('/top_sp500_dividend', function (req, res) {
-    request("https://www.worldtradingdata.com/api/v1/stock?symbol=ADP,IPG,TGT,FE,VLO&sort_order=asc&api_token=3VNuBxaRu4pkkxsJk9cGPCwbOaiiTFLaDrOvyXBNtSQqULQnnqn3fjca6eQu", function (error, res, body) {
-        var content = JSON.parse(body).data;
-        console.log("errors: ", error);
-        console.log("statusCode: ", res && res.statusCode);
-        console.log("JSON: ", content);
+    request("https://www.worldtradingdata.com/api/v1/stock?",
+        {
+            qs: {
+                symbol: 'ADP,IPG,TGT,FE,VLO',
+                sort_order: 'asc',
+                api_token: apiKey
+            },
+            method: 'get'
+        },
+        function (error, res, body) {
+            var content = JSON.parse(body).data;
+            console.log("errors: ", error);
+            console.log("statusCode: ", res && res.statusCode);
+            console.log("JSON: ", content);
 
-        newTopSP500StockData = content.map(rawData => ({
-            symbol: rawData.symbol,
-            name: rawData.name,
-            price: rawData.price,
-            change_pct: rawData.change_pct
-        }))
+            newTopSP500StockData = content.map(rawData => ({
+                symbol: rawData.symbol,
+                name: rawData.name,
+                price: rawData.price,
+                change_pct: rawData.change_pct
+            }))
 
-        console.log("Filtered: ", newTopSP500StockData);
-    });
+            console.log("Filtered: ", newTopSP500StockData);
+        });
     res.send(newTopSP500StockData);
 });
 
 router.get('/top_nasdaq_dividend', function (req, res) {
-    request("https://www.worldtradingdata.com/api/v1/stock?symbol=STX,VOD,QCOM,KHC,PCAR&sort_order=asc&api_token=3VNuBxaRu4pkkxsJk9cGPCwbOaiiTFLaDrOvyXBNtSQqULQnnqn3fjca6eQu", function (error, res, body) {
-        var content = JSON.parse(body).data;
-        console.log("errors: ", error);
-        console.log("statusCode: ", res && res.statusCode);
-        console.log("JSON: ", content);
+    request("https://www.worldtradingdata.com/api/v1/stock?",
+        {
+            qs: {
+                symbol: 'STX,VOD,QCOM,KHC,PCAR',
+                sort_order: 'asc',
+                api_token: apiKey
+            },
+            method: 'get'
+        }, function (error, res, body) {
+            var content = JSON.parse(body).data;
+            console.log("errors: ", error);
+            console.log("statusCode: ", res && res.statusCode);
+            console.log("JSON: ", content);
 
-        newTopNasdaqStockData = content.map(rawData => ({
-            symbol: rawData.symbol,
-            name: rawData.name,
-            price: rawData.price,
-            change_pct: rawData.change_pct
-        }))
+            newTopNasdaqStockData = content.map(rawData => ({
+                symbol: rawData.symbol,
+                name: rawData.name,
+                price: rawData.price,
+                change_pct: rawData.change_pct
+            }))
 
-        console.log("Filtered: ", newTopNasdaqStockData);
-    });
+            console.log("Filtered: ", newTopNasdaqStockData);
+        });
     res.send(newTopNasdaqStockData);
 });
 
@@ -93,7 +126,7 @@ router.get('/quote_search', (req, res) => {
                 {
                     qs: {
                         search_term: searchTerm,
-                        api_token: '3VNuBxaRu4pkkxsJk9cGPCwbOaiiTFLaDrOvyXBNtSQqULQnnqn3fjca6eQu'
+                        api_token: apiKey
                     },
                     method: 'get'
                 },
