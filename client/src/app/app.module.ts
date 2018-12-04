@@ -47,7 +47,6 @@ const appRoutes: Routes = [
     LoginComponent,
     SignUpComponent,
     UserComponent,
-    MessagesComponent,
     BuystocksComponent
   ],
   imports: [
