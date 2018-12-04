@@ -9,7 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { FirebaseUserModel } from '../core/user.model';
 import { CrudService } from '../crud-service.service';
 import { OrderItem } from '../OrderItem';
-
+import { NgModule } from '@angular/core';
 @Component({
   selector: 'app-buystocks',
   templateUrl: './buystocks.component.html',

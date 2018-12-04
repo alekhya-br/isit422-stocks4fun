@@ -9,6 +9,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 import { AuthGuard } from './core/auth.guard';
 import { UserResolver } from './user/user.resolver';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
@@ -59,12 +60,13 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule
   ],
-  providers: [AuthGuard, UserService, AuthService, UserResolver],
+  providers: [HttpClientModule,AuthGuard, UserService, AuthService, UserResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
