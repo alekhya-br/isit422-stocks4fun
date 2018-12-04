@@ -40,7 +40,7 @@
           <td>{{eachOrder.stock_symbol}}</td>
           <td>{{eachOrder.stock_name}}</td>
           <td>{{eachOrder.stock_quantity}}</td>
-          <td style="text-align:right"><strong>${{eachOrder.stock_price | number:'1.2-2'}}</strong></td>
+          <td style="text-align:right">${{eachOrder.stock_price | number:'1.2-2'}}</td>
           <td>
             <button class="btn btn-xs btn-danger" (click)="setModalFields(eachOrder.stock_symbol, eachOrder.stock_name, eachOrder.stock_quantity, eachOrder.stock_price)"
               data-toggle="modal" data-target="#sellStockModal"><i title="Sell" class="fa fa-minus-circle"></i>
