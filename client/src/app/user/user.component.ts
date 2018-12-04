@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../core/user.service';
 import { AuthService } from '../core/auth.service';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
@@ -35,7 +34,6 @@ export class UserComponent implements OnInit {
 
   constructor(
     private myCrudService: CrudService,
-    public userService: UserService,
     public authService: AuthService,
     private route: ActivatedRoute,
     private location: Location,
@@ -78,13 +76,6 @@ export class UserComponent implements OnInit {
     this.profileForm = this.fb.group({
       name: [name, Validators.required]
     });
-  }
-
-  save(value) {
-    this.userService.updateCurrentUser(value)
-      .then(res => {
-        console.log(res);
-      }, err => console.log(err))
   }
 
 }

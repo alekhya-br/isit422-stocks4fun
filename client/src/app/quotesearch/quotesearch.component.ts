@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { MarketDataItem } from '../MarketDataItem';
 import { StockDataItem } from '../StockDataItem';
 import { StockService } from '../stock-service.service';
 
