@@ -35,20 +35,20 @@
   </div>
   <div *ngIf="searchResult" class="table-responsive ">
     <table class="table table-striped col-xs-12">
-        <thead>
-            <tr >
-                <th>Symbol</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th *ngIf="showChange">Change</th>
-                <th>Buy</th>
-              </tr>
-        </thead>
+      <thead>
+          <tr >
+              <th>Symbol</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th *ngIf="showChange">Change</th>
+              <th>Buy</th>
+            </tr>
+      </thead>
       <tbody>
         <tr *ngFor="let eachStock of searchResult">
           <td>{{eachStock.symbol}}</td>
           <td>{{eachStock.name}}</td>
-          <td>{{eachStock.price}}</td>
+          <td>${{eachStock.price}}</td>
           <td *ngIf="showChange">{{eachStock.change_pct}}</td>
           <td>
             <button class="btn btn-xs btn-success" (click)="setModalFields(eachStock.symbol, eachStock.name, eachStock.price)" 
