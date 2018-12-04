@@ -3,7 +3,7 @@
   <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/app.component.spec.ts">
   </file>
   <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/stock-service.service.spec.ts">
-    <testCase name="StockService should be created" duration="554">
+    <testCase name="StockService should be created" duration="602">
       <failure message="Error: StaticInjectorError(DynamicTestModule)[HttpClient]: "><![CDATA[Error: StaticInjectorError(DynamicTestModule)[HttpClient]: 
   StaticInjectorError(Platform: core)[HttpClient]: 
     NullInjectorError: No provider for HttpClient!
@@ -38,7 +38,7 @@
     at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
     at <anonymous>]]></failure>
     </testCase>
-    <testCase name="StockService retrieves all the market indexes" duration="44">
+    <testCase name="StockService retrieves all the market indexes" duration="23">
       <failure message="Error: StaticInjectorError(DynamicTestModule)[HttpClient]: "><![CDATA[Error: StaticInjectorError(DynamicTestModule)[HttpClient]: 
   StaticInjectorError(Platform: core)[HttpClient]: 
     NullInjectorError: No provider for HttpClient!
@@ -81,7 +81,7 @@
     at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
     at <anonymous>]]></failure>
     </testCase>
-    <testCase name="StockService retrieves all winning stocks" duration="15">
+    <testCase name="StockService retrieves all winning stocks" duration="18">
       <failure message="Error: StaticInjectorError(DynamicTestModule)[HttpClient]: "><![CDATA[Error: StaticInjectorError(DynamicTestModule)[HttpClient]: 
   StaticInjectorError(Platform: core)[HttpClient]: 
     NullInjectorError: No provider for HttpClient!
@@ -124,7 +124,7 @@
     at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
     at <anonymous>]]></failure>
     </testCase>
-    <testCase name="StockService retrieves all losing stocks" duration="15">
+    <testCase name="StockService retrieves all losing stocks" duration="44">
       <failure message="Error: StaticInjectorError(DynamicTestModule)[HttpClient]: "><![CDATA[Error: StaticInjectorError(DynamicTestModule)[HttpClient]: 
   StaticInjectorError(Platform: core)[HttpClient]: 
     NullInjectorError: No provider for HttpClient!
@@ -169,7 +169,7 @@
     </testCase>
   </file>
   <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/homepage/homepage.component.spec.ts">
-    <testCase name="HomepageComponent should create" duration="767">
+    <testCase name="HomepageComponent should create" duration="989">
       <failure message="Error: StaticInjectorError(DynamicTestModule)[HttpClient]: "><![CDATA[Error: StaticInjectorError(DynamicTestModule)[HttpClient]: 
   StaticInjectorError(Platform: core)[HttpClient]: 
     NullInjectorError: No provider for HttpClient!
@@ -237,13 +237,13 @@ Received: undefined
     </testCase>
   </file>
   <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/marketperformance/marketperformance.component.spec.ts">
-    <testCase name="MarketperformanceComponent should create" duration="55"/>
+    <testCase name="MarketperformanceComponent should create" duration="69"/>
   </file>
   <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/page-not-found/page-not-found.component.spec.ts">
     <testCase name="PageNotFoundComponent should create" duration="55"/>
   </file>
   <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/quotesearch/quotesearch.component.spec.ts">
-    <testCase name="QuotesearchComponent should create" duration="983">
+    <testCase name="QuotesearchComponent should create" duration="1182">
       <failure message="Error: Template parse errors:"><![CDATA[Error: Template parse errors:
 Can't bind to 'ngModel' since it isn't a known property of 'input'. ("bol to get details</h5>
     <div class="input-group">
@@ -335,7 +335,7 @@ Received: undefined
     </testCase>
   </file>
   <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/buystocks/buystocks.component.spec.ts">
-    <testCase name="BuystocksComponent should create" duration="988">
+    <testCase name="BuystocksComponent should create" duration="1140">
       <failure message="Error: Template parse errors:"><![CDATA[Error: Template parse errors:
 Can't bind to 'formGroup' since it isn't a known property of 'form'. ("
         </div>
@@ -447,10 +447,10 @@ Received: undefined
     </testCase>
   </file>
   <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/messages/messages.component.spec.ts">
-    <testCase name="MessagesComponent should create" duration="416"/>
+    <testCase name="MessagesComponent should create" duration="97"/>
   </file>
   <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/sign-up/sign-up.component.spec.ts">
-    <testCase name="SignUpComponent should create" duration="931">
+    <testCase name="SignUpComponent should create" duration="1161">
       <failure message="Error: Template parse errors:"><![CDATA[Error: Template parse errors:
 Can't bind to 'formGroup' since it isn't a known property of 'form'. ("
   <div class="row">
@@ -545,11 +545,8 @@ Received: undefined
     at <anonymous>]]></failure>
     </testCase>
   </file>
-  <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/about/about.component.spec.ts">
-    <testCase name="AboutComponent should create" duration="59"/>
-  </file>
   <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/login/login.component.spec.ts">
-    <testCase name="LoginComponent should create" duration="920">
+    <testCase name="LoginComponent should create" duration="1080">
       <failure message="Error: Template parse errors:"><![CDATA[Error: Template parse errors:
 Can't bind to 'formGroup' since it isn't a known property of 'form'. ("
   <div class="row">
@@ -645,7 +642,7 @@ Received: undefined
     </testCase>
   </file>
   <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/user/user.component.spec.ts">
-    <testCase name="UserComponent should create" duration="956">
+    <testCase name="UserComponent should create" duration="1220">
       <failure message="Error: Template parse errors:"><![CDATA[Error: Template parse errors:
 Can't bind to 'formGroup' since it isn't a known property of 'form'. ("
         </div>
@@ -746,158 +743,8 @@ Received: undefined
     at <anonymous>]]></failure>
     </testCase>
   </file>
-  <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/crud/crud.component.spec.ts">
-    <testCase name="CrudComponent should create" duration="939">
-      <failure message="Error: Template parse errors:"><![CDATA[Error: Template parse errors:
-Can't bind to 'ngModel' since it isn't a known property of 'input'. ("
-        <div>
-            <label>First Name:
-                <input [ERROR ->][(ngModel)]="selectedUserItem.firstname">
-            </label><br />
-            <label>Last Name:
-"): ng:///DynamicTestModule/CrudComponent.html@14:23
-Can't bind to 'ngModel' since it isn't a known property of 'input'. ("
-            </label><br />
-            <label>Last Name:
-                <input [ERROR ->][(ngModel)]="selectedUserItem.lastname">
-            </label><br />
-            <label>Username:
-"): ng:///DynamicTestModule/CrudComponent.html@17:23
-Can't bind to 'ngModel' since it isn't a known property of 'input'. ("
-            </label><br />
-            <label>Username:
-                <input [ERROR ->][(ngModel)]="selectedUserItem.username">
-            </label>
-            <br />
-"): ng:///DynamicTestModule/CrudComponent.html@20:23
-Can't bind to 'ngModel' since it isn't a known property of 'input'. ("
-            <br />
-            <label>Password:
-                <input [ERROR ->][(ngModel)]="selectedUserItem.password">
-            </label>
-            <br />
-"): ng:///DynamicTestModule/CrudComponent.html@24:23
-Can't bind to 'ngModel' since it isn't a known property of 'input'. ("
-            <br />
-            <label>_id:
-                <input [ERROR ->][(ngModel)]="selectedUserItem._id">
-            </label><br />
-            <button (click)="deleteUse"): ng:///DynamicTestModule/CrudComponent.html@28:23
-    at syntaxError (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:100:17)
-    at TemplateParser.Object.<anonymous>.TemplateParser.parse (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/template_parser/template_parser.ts:106:13)
-    at JitCompiler.Object.<anonymous>.JitCompiler._parseTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:297:33)
-    at JitCompiler.Object.<anonymous>.JitCompiler._compileTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:275:11)
-    at /home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:206:42
-    at Set.forEach (<anonymous>)
-    at JitCompiler.Object.<anonymous>.JitCompiler._compileComponents (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:206:15)
-    at /home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:117:12
-    at Object.then (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:89:74)
-    at JitCompiler.Object.<anonymous>.JitCompiler._compileModuleAndAllComponents (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:115:22)
-    at JitCompiler.Object.<anonymous>.JitCompiler.compileModuleAndAllComponentsAsync (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:69:33)
-    at CompilerImpl.Object.<anonymous>.CompilerImpl.compileModuleAndAllComponentsAsync (/home/bcuser/Git/isit422-stocks4fun/packages/platform-browser-dynamic/src/compiler_factory.ts:68:27)
-    at TestingCompilerImpl.Object.<anonymous>.TestingCompilerImpl.compileModuleAndAllComponentsAsync (/home/bcuser/Git/packages/platform-browser-dynamic/testing/src/compiler_factory.ts:57:27)
-    at TestBed.Object.<anonymous>.TestBed.compileComponents (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:335:27)
-    at Function.Object.<anonymous>.TestBed.compileComponents (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:116:66)
-    at /home/bcuser/Git/isit422-stocks4fun/client/src/app/crud/crud.component.spec.ts:13:6
-    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
-    at AsyncTestZoneSpec.Object.<anonymous>.AsyncTestZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/async-test.js:106:39)
-    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:125:39)
-    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
-    at Zone.Object.<anonymous>.Zone.runGuarded (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:151:47)
-    at runInTestZone (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/async-test.js:234:29)
-    at /home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/async-test.js:168:17
-    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
-    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:128:39)
-    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
-    at Zone.Object.<anonymous>.Zone.run (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:138:43)
-    at Object.testBody.length.done (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-zone-patch/index.js:51:29)
-    at resolve (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
-    at new Promise (<anonymous>)
-    at mapper (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
-    at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
-    at <anonymous>]]></failure>
-      <failure message="Error: Template parse errors:"><![CDATA[Error: Template parse errors:
-Can't bind to 'ngModel' since it isn't a known property of 'input'. ("
-        <div>
-            <label>First Name:
-                <input [ERROR ->][(ngModel)]="selectedUserItem.firstname">
-            </label><br />
-            <label>Last Name:
-"): ng:///DynamicTestModule/CrudComponent.html@14:23
-Can't bind to 'ngModel' since it isn't a known property of 'input'. ("
-            </label><br />
-            <label>Last Name:
-                <input [ERROR ->][(ngModel)]="selectedUserItem.lastname">
-            </label><br />
-            <label>Username:
-"): ng:///DynamicTestModule/CrudComponent.html@17:23
-Can't bind to 'ngModel' since it isn't a known property of 'input'. ("
-            </label><br />
-            <label>Username:
-                <input [ERROR ->][(ngModel)]="selectedUserItem.username">
-            </label>
-            <br />
-"): ng:///DynamicTestModule/CrudComponent.html@20:23
-Can't bind to 'ngModel' since it isn't a known property of 'input'. ("
-            <br />
-            <label>Password:
-                <input [ERROR ->][(ngModel)]="selectedUserItem.password">
-            </label>
-            <br />
-"): ng:///DynamicTestModule/CrudComponent.html@24:23
-Can't bind to 'ngModel' since it isn't a known property of 'input'. ("
-            <br />
-            <label>_id:
-                <input [ERROR ->][(ngModel)]="selectedUserItem._id">
-            </label><br />
-            <button (click)="deleteUse"): ng:///DynamicTestModule/CrudComponent.html@28:23
-    at syntaxError (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:100:17)
-    at TemplateParser.Object.<anonymous>.TemplateParser.parse (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/template_parser/template_parser.ts:106:13)
-    at JitCompiler.Object.<anonymous>.JitCompiler._parseTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:297:33)
-    at JitCompiler.Object.<anonymous>.JitCompiler._compileTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:275:11)
-    at /home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:206:42
-    at Set.forEach (<anonymous>)
-    at JitCompiler.Object.<anonymous>.JitCompiler._compileComponents (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:206:15)
-    at /home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:117:12
-    at Object.then (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:89:74)
-    at JitCompiler.Object.<anonymous>.JitCompiler._compileModuleAndAllComponents (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:115:22)
-    at JitCompiler.Object.<anonymous>.JitCompiler.compileModuleAndAllComponentsSync (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:65:38)
-    at CompilerImpl.Object.<anonymous>.CompilerImpl.compileModuleAndAllComponentsSync (/home/bcuser/Git/isit422-stocks4fun/packages/platform-browser-dynamic/src/compiler_factory.ts:60:35)
-    at TestingCompilerImpl.Object.<anonymous>.TestingCompilerImpl.compileModuleAndAllComponentsSync (/home/bcuser/Git/packages/platform-browser-dynamic/testing/src/compiler_factory.ts:52:27)
-    at TestBed.Object.<anonymous>.TestBed._initIfNeeded (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:349:28)
-    at TestBed.Object.<anonymous>.TestBed.createComponent (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:552:10)
-    at Function.Object.<anonymous>.TestBed.createComponent (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:201:25)
-    at /home/bcuser/Git/isit422-stocks4fun/client/src/app/crud/crud.component.spec.ts:17:23
-    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
-    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:128:39)
-    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
-    at Zone.Object.<anonymous>.Zone.run (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:138:43)
-    at Object.testBody.length (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-zone-patch/index.js:50:27)
-    at Object.asyncJestLifecycle (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/jasmine_async.js:63:37)
-    at resolve (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
-    at new Promise (<anonymous>)
-    at mapper (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
-    at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
-    at <anonymous>]]></failure>
-      <failure message="Error: expect(received).toBeTruthy()"><![CDATA[Error: expect(received).toBeTruthy()
-
-Received: undefined
-    at /home/bcuser/Git/isit422-stocks4fun/client/src/app/crud/crud.component.spec.ts:23:23
-    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
-    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:128:39)
-    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
-    at Zone.Object.<anonymous>.Zone.run (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:138:43)
-    at Object.testBody.length (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-zone-patch/index.js:50:27)
-    at Object.asyncJestTest (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/jasmine_async.js:108:37)
-    at resolve (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
-    at new Promise (<anonymous>)
-    at mapper (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
-    at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
-    at <anonymous>]]></failure>
-    </testCase>
-  </file>
   <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/crud-service.service.spec.ts">
-    <testCase name="CrudService should be created" duration="537">
+    <testCase name="CrudService should be created" duration="583">
       <failure message="Error: StaticInjectorError(DynamicTestModule)[HttpClient]: "><![CDATA[Error: StaticInjectorError(DynamicTestModule)[HttpClient]: 
   StaticInjectorError(Platform: core)[HttpClient]: 
     NullInjectorError: No provider for HttpClient!
