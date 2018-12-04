@@ -21,7 +21,6 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { UserComponent } from './user/user.component';
 import { UserService } from './core/user.service';
 import { AuthService } from './core/auth.service';
-import { MessagesComponent } from './messages/messages.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomepageComponent },
