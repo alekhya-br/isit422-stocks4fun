@@ -1,14 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { QuotesearchComponent } from './quotesearch.component';
-import {Component, DebugElement} from "@angular/core";
-
-import {By} from "@angular/platform-browser";
 
 describe('QuotesearchComponent', () => {
   let component: QuotesearchComponent;
   let fixture: ComponentFixture<QuotesearchComponent>;
-  let inputElement: DebugElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -26,7 +22,4 @@ describe('QuotesearchComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  
 });
-
-

@@ -1,14 +1,14 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HomepageComponent } from './homepage.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms'; // <<<<< klf
 
-describe('CalculateComponent', () => {
+fdescribe('HomepageComponent', () => {
   let component: HomepageComponent;
   let fixture: ComponentFixture<HomepageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [FormsModule],
+      imports: [FormsModule],  //  klf  <<<<<<<<<,
       declarations: [HomepageComponent]
     })
       .compileComponents();
@@ -20,7 +20,7 @@ describe('CalculateComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  fit('should create', () => {
     expect(component).toBeTruthy();
-  });
+  })
 });

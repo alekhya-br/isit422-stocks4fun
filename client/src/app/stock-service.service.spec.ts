@@ -26,9 +26,4 @@ describe('StockService', () => {
       expect(result.length).toBeGreaterThan(0);
     });
   })));
-  it('should return the result for searched symbol', async(inject([StockService], (service) => {
-    service.searchQuotes().subscribe(result => {
-      expect(result.length).toBeGreaterThan(0);
-    });
-  })));
 });
