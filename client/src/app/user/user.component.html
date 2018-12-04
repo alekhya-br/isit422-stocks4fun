@@ -1,27 +1,3 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-4 col-md-offset-4">
-      <div class="card" style="width: 20rem;">
-        <img class="card-img-top image" [src]="user.image" alt="Card image cap">
-        <div *ngIf='user.provider != "password"' class="card-body">
-          <h4 class="card-title">{{user.name}}</h4>
-          <h4 class="card-title">uid: {{user.uid}}</h4>
-          <p class="card-text">This is an example of Social Authentication using Firebase in an Angular 5 web app. </p>
-        </div>
-        <div *ngIf='user.provider == "password"' class="card-body">
-          <form [formGroup]="profileForm">
-            <div class="form-group">
-              <label>Your name</label>
-              <input type="text" formControlName="name" class="form-control" required>
-            </div>
-          </form>
-          <a (click)="save(profileForm.value)" class="btn btn-primary">Save</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <div class="col-md-8 col-md-offset-2">
   <h3>{{user.name}}'s Portfolio:</h3>
 
@@ -31,7 +7,7 @@
           <th>Symbol</th>
           <th>Name</th>
           <th>Quantity</th>
-          <th>Price</th>
+          <th>Price Per Stock</th>
           <th>Sell</th>
         </tr>
       </thead>
@@ -40,9 +16,9 @@
           <td>{{eachOrder.stock_symbol}}</td>
           <td>{{eachOrder.stock_name}}</td>
           <td>{{eachOrder.stock_quantity}}</td>
-          <td style="text-align:right"><strong>$ {{eachOrder.stock_price | number:'1.2-2'}}</strong></td>
+          <td style="text-align:right">${{eachOrder.stock_price | number:'1.2-2'}}</td>
           <td>
-            <button class="btn btn-xs btn-danger" (click)="setModalFields(eachOrder.stock_symbol, eachOrder.stock_name, eachOrder.stock_quantity, eachOrder.stock_price)"
+            <button class="btn btn-xs btn-danger" (click)="setModalFields(eachOrder.stock_symbol, eachOrder.stock_name, eachOrder.stock_price)"
               data-toggle="modal" data-target="#sellStockModal"><i title="Sell" class="fa fa-minus-circle"></i>
             </button>
           </td>
@@ -64,7 +40,7 @@
           <br/>
           <label for="stockName">Stock name: {{stockName}}</label>
           <br/>
-          <label for="stockPrice">Price: {{stockPrice}}</label>
+          <label for="stockPrice">Price: ${{stockPrice}}</label>
           <br/>
           <label for="stockQuantity">Quantity:</label><input class="form-control" placeholder="How many shares?" type="text" name="quantity" [(ngModel)]="stockQuantity"/>
         </div>

@@ -16,7 +16,6 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { QuotesearchComponent } from './quotesearch/quotesearch.component';
 import { BuystocksComponent } from './buystocks/buystocks.component';
-import { MarketperformanceComponent } from './marketperformance/marketperformance.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { UserComponent } from './user/user.component';
@@ -28,7 +27,6 @@ const appRoutes: Routes = [
   { path: 'home', component: HomepageComponent },
   { path: 'quotesearch', component: QuotesearchComponent},
   { path: 'buystocks', component: BuystocksComponent, resolve: { data: UserResolver }},
-  { path: 'marketperformance', component: MarketperformanceComponent},
   { path: 'login', component: LoginComponent, canActivate: [AuthGuard] },
   { path: 'register', component: SignUpComponent, canActivate: [AuthGuard] },
   { path: 'user', component: UserComponent, resolve: { data: UserResolver }},
@@ -45,7 +43,6 @@ const appRoutes: Routes = [
     HomepageComponent,
     PageNotFoundComponent,
     QuotesearchComponent,
-    MarketperformanceComponent,
     LoginComponent,
     SignUpComponent,
     UserComponent,

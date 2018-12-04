@@ -11,18 +11,20 @@
   </div>
   <div *ngIf="searchResult" class="table-responsive">
     <table class="table table-striped col-xs-12">
-      <tbody>
+      <thead>
         <tr >
-          <th>Symbol</th>
-          <th>Name</th>
-          <th>Price</th>
-          <th *ngIf="showChange">% Change</th>
-        </tr>
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th *ngIf="showChange">Change</th>
+          </tr>
+      </thead>
+      <tbody>
         <tr *ngFor="let eachStock of searchResult">
-          <th>{{eachStock.symbol}}</th>
-          <th>{{eachStock.name}}</th>
-          <th>{{eachStock.price}}</th>
-          <th *ngIf="showChange">{{eachStock.change_pct}}</th>
+          <td>{{eachStock.symbol}}</td>
+          <td>{{eachStock.name}}</td>
+          <td>${{eachStock.price}}</td>
+          <td *ngIf="showChange">{{eachStock.change_pct}}</td>
         </tr>
       </tbody>
     </table>
