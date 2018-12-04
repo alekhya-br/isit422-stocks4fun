@@ -1,0 +1,936 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/app.component.spec.ts">
+  </file>
+  <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/stock-service.service.spec.ts">
+    <testCase name="StockService should be created" duration="629">
+      <failure message="Error: StaticInjectorError(DynamicTestModule)[HttpClient]: "><![CDATA[Error: StaticInjectorError(DynamicTestModule)[HttpClient]: 
+  StaticInjectorError(Platform: core)[HttpClient]: 
+    NullInjectorError: No provider for HttpClient!
+    at NullInjector.Object.<anonymous>.NullInjector.get (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:39:13)
+    at resolveToken (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:334:20)
+    at tryResolveToken (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:276:12)
+    at StaticInjector.Object.<anonymous>.StaticInjector.get (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:156:14)
+    at resolveToken (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:334:20)
+    at tryResolveToken (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:276:12)
+    at StaticInjector.Object.<anonymous>.StaticInjector.get (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:156:14)
+    at resolveNgModuleDep (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/ng_module.ts:124:25)
+    at NgModuleRef_.Object.<anonymous>.NgModuleRef_.get (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/refs.ts:505:12)
+    at inject (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:473:29)
+    at injectArgs (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:503:17)
+    at /home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injectable.ts:98:30
+    at _callFactory (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/ng_module.ts:193:14)
+    at _createProviderInstance (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/ng_module.ts:146:20)
+    at resolveNgModuleDep (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/ng_module.ts:120:15)
+    at NgModuleRef_.Object.<anonymous>.NgModuleRef_.get (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/refs.ts:505:12)
+    at TestBed.Object.<anonymous>.TestBed.get (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:437:45)
+    at Function.Object.<anonymous>.TestBed.get (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:197:25)
+    at /home/bcuser/Git/isit422-stocks4fun/client/src/app/stock-service.service.spec.ts:8:43
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:128:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.run (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:138:43)
+    at Object.testBody.length (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-zone-patch/index.js:50:27)
+    at Object.asyncJestTest (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/jasmine_async.js:108:37)
+    at resolve (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (<anonymous>)
+    at mapper (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at <anonymous>]]></failure>
+    </testCase>
+    <testCase name="StockService retrieves all the market indexes" duration="21">
+      <failure message="Error: StaticInjectorError(DynamicTestModule)[HttpClient]: "><![CDATA[Error: StaticInjectorError(DynamicTestModule)[HttpClient]: 
+  StaticInjectorError(Platform: core)[HttpClient]: 
+    NullInjectorError: No provider for HttpClient!
+    at NullInjector.Object.<anonymous>.NullInjector.get (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:39:13)
+    at resolveToken (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:334:20)
+    at tryResolveToken (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:276:12)
+    at StaticInjector.Object.<anonymous>.StaticInjector.get (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:156:14)
+    at resolveToken (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:334:20)
+    at tryResolveToken (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:276:12)
+    at StaticInjector.Object.<anonymous>.StaticInjector.get (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:156:14)
+    at resolveNgModuleDep (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/ng_module.ts:124:25)
+    at NgModuleRef_.Object.<anonymous>.NgModuleRef_.get (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/refs.ts:505:12)
+    at inject (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:473:29)
+    at injectArgs (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:503:17)
+    at /home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injectable.ts:98:30
+    at _callFactory (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/ng_module.ts:193:14)
+    at _createProviderInstance (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/ng_module.ts:146:20)
+    at resolveNgModuleDep (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/ng_module.ts:120:15)
+    at NgModuleRef_.Object.<anonymous>.NgModuleRef_.get (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/refs.ts:505:12)
+    at TestBed.Object.<anonymous>.TestBed.get (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:437:45)
+    at /home/bcuser/Git/packages/core/testing/src/test_bed.ts:443:41
+    at Array.map (<anonymous>)
+    at TestBed.Object.<anonymous>.TestBed.execute (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:443:27)
+    at /home/bcuser/Git/packages/core/testing/src/test_bed.ts:627:40
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at AsyncTestZoneSpec.Object.<anonymous>.AsyncTestZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/async-test.js:106:39)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:125:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.runGuarded (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:151:47)
+    at runInTestZone (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/async-test.js:234:29)
+    at /home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/async-test.js:168:17
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:128:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.run (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:138:43)
+    at Object.testBody.length.done (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-zone-patch/index.js:51:29)
+    at resolve (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (<anonymous>)
+    at mapper (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at <anonymous>]]></failure>
+    </testCase>
+    <testCase name="StockService retrieves all winning stocks" duration="17">
+      <failure message="Error: StaticInjectorError(DynamicTestModule)[HttpClient]: "><![CDATA[Error: StaticInjectorError(DynamicTestModule)[HttpClient]: 
+  StaticInjectorError(Platform: core)[HttpClient]: 
+    NullInjectorError: No provider for HttpClient!
+    at NullInjector.Object.<anonymous>.NullInjector.get (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:39:13)
+    at resolveToken (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:334:20)
+    at tryResolveToken (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:276:12)
+    at StaticInjector.Object.<anonymous>.StaticInjector.get (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:156:14)
+    at resolveToken (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:334:20)
+    at tryResolveToken (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:276:12)
+    at StaticInjector.Object.<anonymous>.StaticInjector.get (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:156:14)
+    at resolveNgModuleDep (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/ng_module.ts:124:25)
+    at NgModuleRef_.Object.<anonymous>.NgModuleRef_.get (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/refs.ts:505:12)
+    at inject (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:473:29)
+    at injectArgs (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:503:17)
+    at /home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injectable.ts:98:30
+    at _callFactory (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/ng_module.ts:193:14)
+    at _createProviderInstance (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/ng_module.ts:146:20)
+    at resolveNgModuleDep (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/ng_module.ts:120:15)
+    at NgModuleRef_.Object.<anonymous>.NgModuleRef_.get (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/refs.ts:505:12)
+    at TestBed.Object.<anonymous>.TestBed.get (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:437:45)
+    at /home/bcuser/Git/packages/core/testing/src/test_bed.ts:443:41
+    at Array.map (<anonymous>)
+    at TestBed.Object.<anonymous>.TestBed.execute (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:443:27)
+    at /home/bcuser/Git/packages/core/testing/src/test_bed.ts:627:40
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at AsyncTestZoneSpec.Object.<anonymous>.AsyncTestZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/async-test.js:106:39)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:125:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.runGuarded (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:151:47)
+    at runInTestZone (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/async-test.js:234:29)
+    at /home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/async-test.js:168:17
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:128:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.run (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:138:43)
+    at Object.testBody.length.done (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-zone-patch/index.js:51:29)
+    at resolve (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (<anonymous>)
+    at mapper (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at <anonymous>]]></failure>
+    </testCase>
+    <testCase name="StockService retrieves all losing stocks" duration="17">
+      <failure message="Error: StaticInjectorError(DynamicTestModule)[HttpClient]: "><![CDATA[Error: StaticInjectorError(DynamicTestModule)[HttpClient]: 
+  StaticInjectorError(Platform: core)[HttpClient]: 
+    NullInjectorError: No provider for HttpClient!
+    at NullInjector.Object.<anonymous>.NullInjector.get (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:39:13)
+    at resolveToken (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:334:20)
+    at tryResolveToken (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:276:12)
+    at StaticInjector.Object.<anonymous>.StaticInjector.get (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:156:14)
+    at resolveToken (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:334:20)
+    at tryResolveToken (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:276:12)
+    at StaticInjector.Object.<anonymous>.StaticInjector.get (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:156:14)
+    at resolveNgModuleDep (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/ng_module.ts:124:25)
+    at NgModuleRef_.Object.<anonymous>.NgModuleRef_.get (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/refs.ts:505:12)
+    at inject (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:473:29)
+    at injectArgs (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:503:17)
+    at /home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injectable.ts:98:30
+    at _callFactory (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/ng_module.ts:193:14)
+    at _createProviderInstance (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/ng_module.ts:146:20)
+    at resolveNgModuleDep (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/ng_module.ts:120:15)
+    at NgModuleRef_.Object.<anonymous>.NgModuleRef_.get (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/refs.ts:505:12)
+    at TestBed.Object.<anonymous>.TestBed.get (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:437:45)
+    at /home/bcuser/Git/packages/core/testing/src/test_bed.ts:443:41
+    at Array.map (<anonymous>)
+    at TestBed.Object.<anonymous>.TestBed.execute (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:443:27)
+    at /home/bcuser/Git/packages/core/testing/src/test_bed.ts:627:40
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at AsyncTestZoneSpec.Object.<anonymous>.AsyncTestZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/async-test.js:106:39)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:125:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.runGuarded (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:151:47)
+    at runInTestZone (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/async-test.js:234:29)
+    at /home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/async-test.js:168:17
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:128:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.run (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:138:43)
+    at Object.testBody.length.done (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-zone-patch/index.js:51:29)
+    at resolve (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (<anonymous>)
+    at mapper (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at <anonymous>]]></failure>
+    </testCase>
+  </file>
+  <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/homepage/homepage.component.spec.ts">
+    <testCase name="HomepageComponent should create" duration="728">
+      <failure message="Error: StaticInjectorError(DynamicTestModule)[HttpClient]: "><![CDATA[Error: StaticInjectorError(DynamicTestModule)[HttpClient]: 
+  StaticInjectorError(Platform: core)[HttpClient]: 
+    NullInjectorError: No provider for HttpClient!
+    at NullInjector.Object.<anonymous>.NullInjector.get (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:39:13)
+    at resolveToken (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:334:20)
+    at tryResolveToken (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:276:12)
+    at StaticInjector.Object.<anonymous>.StaticInjector.get (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:156:14)
+    at resolveToken (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:334:20)
+    at tryResolveToken (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:276:12)
+    at StaticInjector.Object.<anonymous>.StaticInjector.get (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:156:14)
+    at resolveNgModuleDep (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/ng_module.ts:124:25)
+    at NgModuleRef_.Object.<anonymous>.NgModuleRef_.get (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/refs.ts:505:12)
+    at inject (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:473:29)
+    at injectArgs (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:503:17)
+    at /home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injectable.ts:98:30
+    at _callFactory (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/ng_module.ts:193:14)
+    at _createProviderInstance (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/ng_module.ts:146:20)
+    at resolveNgModuleDep (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/ng_module.ts:120:15)
+    at NgModuleRef_.Object.<anonymous>.NgModuleRef_.get (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/refs.ts:505:12)
+    at resolveDep (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/provider.ts:416:43)
+    at createClass (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/provider.ts:263:23)
+    at createDirectiveInstance (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/provider.ts:135:20)
+    at createViewNodes (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/view.ts:303:28)
+    at createRootView (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/view.ts:210:3)
+    at callWithDebugContext (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/services.ts:639:23)
+    at Object.debugCreateRootView [as createRootView] (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/services.ts:121:10)
+    at ComponentFactory_.Object.<anonymous>.ComponentFactory_.create (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/refs.ts:92:27)
+    at initComponent (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:569:28)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:128:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Object.onInvoke (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/zone/ng_zone.ts:273:25)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.run (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:138:43)
+    at NgZone.Object.<anonymous>.NgZone.run (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/zone/ng_zone.ts:171:50)
+    at TestBed.Object.<anonymous>.TestBed.createComponent (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:573:56)
+    at Function.Object.<anonymous>.TestBed.createComponent (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:201:25)
+    at /home/bcuser/Git/isit422-stocks4fun/client/src/app/homepage/homepage.component.spec.ts:18:23
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:128:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.run (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:138:43)
+    at Object.testBody.length (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-zone-patch/index.js:50:27)
+    at Object.asyncJestLifecycle (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/jasmine_async.js:63:37)
+    at resolve (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (<anonymous>)
+    at mapper (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at <anonymous>]]></failure>
+      <failure message="Error: expect(received).toBeTruthy()"><![CDATA[Error: expect(received).toBeTruthy()
+
+Received: undefined
+    at /home/bcuser/Git/isit422-stocks4fun/client/src/app/homepage/homepage.component.spec.ts:24:23
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:128:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.run (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:138:43)
+    at Object.testBody.length (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-zone-patch/index.js:50:27)
+    at Object.asyncJestTest (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/jasmine_async.js:108:37)
+    at resolve (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (<anonymous>)
+    at mapper (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at <anonymous>]]></failure>
+    </testCase>
+  </file>
+  <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/marketperformance/marketperformance.component.spec.ts">
+    <testCase name="MarketperformanceComponent should create" duration="56"/>
+  </file>
+  <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/page-not-found/page-not-found.component.spec.ts">
+    <testCase name="PageNotFoundComponent should create" duration="52"/>
+  </file>
+  <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/quotesearch/quotesearch.component.spec.ts">
+    <testCase name="QuotesearchComponent should create" duration="994">
+      <failure message="Error: Template parse errors:"><![CDATA[Error: Template parse errors:
+Can't bind to 'ngModel' since it isn't a known property of 'input'. ("bol to get details</h5>
+    <div class="input-group">
+      <input type="text" class="form-control" [ERROR ->][(ngModel)]="searchText" placeholder="symbol" #searchTerm />
+      <div class="input-group-append">
+ "): ng:///DynamicTestModule/QuotesearchComponent.html@5:46
+    at syntaxError (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:100:17)
+    at TemplateParser.Object.<anonymous>.TemplateParser.parse (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/template_parser/template_parser.ts:106:13)
+    at JitCompiler.Object.<anonymous>.JitCompiler._parseTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:297:33)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:275:11)
+    at /home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:206:42
+    at Set.forEach (<anonymous>)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileComponents (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:206:15)
+    at /home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:117:12
+    at Object.then (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:89:74)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileModuleAndAllComponents (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:115:22)
+    at JitCompiler.Object.<anonymous>.JitCompiler.compileModuleAndAllComponentsAsync (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:69:33)
+    at CompilerImpl.Object.<anonymous>.CompilerImpl.compileModuleAndAllComponentsAsync (/home/bcuser/Git/isit422-stocks4fun/packages/platform-browser-dynamic/src/compiler_factory.ts:68:27)
+    at TestingCompilerImpl.Object.<anonymous>.TestingCompilerImpl.compileModuleAndAllComponentsAsync (/home/bcuser/Git/packages/platform-browser-dynamic/testing/src/compiler_factory.ts:57:27)
+    at TestBed.Object.<anonymous>.TestBed.compileComponents (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:335:27)
+    at Function.Object.<anonymous>.TestBed.compileComponents (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:116:66)
+    at /home/bcuser/Git/isit422-stocks4fun/client/src/app/quotesearch/quotesearch.component.spec.ts:13:6
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at AsyncTestZoneSpec.Object.<anonymous>.AsyncTestZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/async-test.js:106:39)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:125:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.runGuarded (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:151:47)
+    at runInTestZone (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/async-test.js:234:29)
+    at /home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/async-test.js:168:17
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:128:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.run (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:138:43)
+    at Object.testBody.length.done (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-zone-patch/index.js:51:29)
+    at resolve (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (<anonymous>)
+    at mapper (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at <anonymous>]]></failure>
+      <failure message="Error: Template parse errors:"><![CDATA[Error: Template parse errors:
+Can't bind to 'ngModel' since it isn't a known property of 'input'. ("bol to get details</h5>
+    <div class="input-group">
+      <input type="text" class="form-control" [ERROR ->][(ngModel)]="searchText" placeholder="symbol" #searchTerm />
+      <div class="input-group-append">
+ "): ng:///DynamicTestModule/QuotesearchComponent.html@5:46
+    at syntaxError (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:100:17)
+    at TemplateParser.Object.<anonymous>.TemplateParser.parse (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/template_parser/template_parser.ts:106:13)
+    at JitCompiler.Object.<anonymous>.JitCompiler._parseTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:297:33)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:275:11)
+    at /home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:206:42
+    at Set.forEach (<anonymous>)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileComponents (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:206:15)
+    at /home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:117:12
+    at Object.then (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:89:74)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileModuleAndAllComponents (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:115:22)
+    at JitCompiler.Object.<anonymous>.JitCompiler.compileModuleAndAllComponentsSync (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:65:38)
+    at CompilerImpl.Object.<anonymous>.CompilerImpl.compileModuleAndAllComponentsSync (/home/bcuser/Git/isit422-stocks4fun/packages/platform-browser-dynamic/src/compiler_factory.ts:60:35)
+    at TestingCompilerImpl.Object.<anonymous>.TestingCompilerImpl.compileModuleAndAllComponentsSync (/home/bcuser/Git/packages/platform-browser-dynamic/testing/src/compiler_factory.ts:52:27)
+    at TestBed.Object.<anonymous>.TestBed._initIfNeeded (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:349:28)
+    at TestBed.Object.<anonymous>.TestBed.createComponent (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:552:10)
+    at Function.Object.<anonymous>.TestBed.createComponent (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:201:25)
+    at /home/bcuser/Git/isit422-stocks4fun/client/src/app/quotesearch/quotesearch.component.spec.ts:17:23
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:128:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.run (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:138:43)
+    at Object.testBody.length (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-zone-patch/index.js:50:27)
+    at Object.asyncJestLifecycle (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/jasmine_async.js:63:37)
+    at resolve (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (<anonymous>)
+    at mapper (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at <anonymous>]]></failure>
+      <failure message="Error: expect(received).toBeTruthy()"><![CDATA[Error: expect(received).toBeTruthy()
+
+Received: undefined
+    at /home/bcuser/Git/isit422-stocks4fun/client/src/app/quotesearch/quotesearch.component.spec.ts:23:23
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:128:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.run (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:138:43)
+    at Object.testBody.length (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-zone-patch/index.js:50:27)
+    at Object.asyncJestTest (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/jasmine_async.js:108:37)
+    at resolve (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (<anonymous>)
+    at mapper (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at <anonymous>]]></failure>
+    </testCase>
+  </file>
+  <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/buystocks/buystocks.component.spec.ts">
+    <testCase name="BuystocksComponent should create" duration="986">
+      <failure message="Error: Template parse errors:"><![CDATA[Error: Template parse errors:
+Can't bind to 'formGroup' since it isn't a known property of 'form'. ("
+        </div>
+        <div *ngIf='user.provider == "password"' class="card-body">
+          <form [ERROR ->][formGroup]="profileForm">
+            <div class="form-group">
+              <label>Your name</label"): ng:///DynamicTestModule/BuystocksComponent.html@11:16
+Can't bind to 'ngModel' since it isn't a known property of 'input'. ("bol to get details</h5>
+    <div class="input-group">
+      <input type="text" class="form-control" [ERROR ->][(ngModel)]="searchText" placeholder="symbol" #searchTerm />
+      <div class="input-group-append">
+ "): ng:///DynamicTestModule/BuystocksComponent.html@29:46
+Can't bind to 'ngModel' since it isn't a known property of 'input'. ("tity:</label><input class="form-control" placeholder="How many shares?" type="text" name="quantity" [ERROR ->][(ngModel)]="stockQuantity"/>
+        </div>
+        <div class="modal-footer">
+"): ng:///DynamicTestModule/BuystocksComponent.html@77:141
+    at syntaxError (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:100:17)
+    at TemplateParser.Object.<anonymous>.TemplateParser.parse (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/template_parser/template_parser.ts:106:13)
+    at JitCompiler.Object.<anonymous>.JitCompiler._parseTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:297:33)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:275:11)
+    at /home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:206:42
+    at Set.forEach (<anonymous>)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileComponents (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:206:15)
+    at /home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:117:12
+    at Object.then (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:89:74)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileModuleAndAllComponents (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:115:22)
+    at JitCompiler.Object.<anonymous>.JitCompiler.compileModuleAndAllComponentsAsync (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:69:33)
+    at CompilerImpl.Object.<anonymous>.CompilerImpl.compileModuleAndAllComponentsAsync (/home/bcuser/Git/isit422-stocks4fun/packages/platform-browser-dynamic/src/compiler_factory.ts:68:27)
+    at TestingCompilerImpl.Object.<anonymous>.TestingCompilerImpl.compileModuleAndAllComponentsAsync (/home/bcuser/Git/packages/platform-browser-dynamic/testing/src/compiler_factory.ts:57:27)
+    at TestBed.Object.<anonymous>.TestBed.compileComponents (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:335:27)
+    at Function.Object.<anonymous>.TestBed.compileComponents (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:116:66)
+    at /home/bcuser/Git/isit422-stocks4fun/client/src/app/buystocks/buystocks.component.spec.ts:13:6
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at AsyncTestZoneSpec.Object.<anonymous>.AsyncTestZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/async-test.js:106:39)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:125:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.runGuarded (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:151:47)
+    at runInTestZone (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/async-test.js:234:29)
+    at /home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/async-test.js:168:17
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:128:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.run (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:138:43)
+    at Object.testBody.length.done (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-zone-patch/index.js:51:29)
+    at resolve (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (<anonymous>)
+    at mapper (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at <anonymous>]]></failure>
+      <failure message="Error: Template parse errors:"><![CDATA[Error: Template parse errors:
+Can't bind to 'formGroup' since it isn't a known property of 'form'. ("
+        </div>
+        <div *ngIf='user.provider == "password"' class="card-body">
+          <form [ERROR ->][formGroup]="profileForm">
+            <div class="form-group">
+              <label>Your name</label"): ng:///DynamicTestModule/BuystocksComponent.html@11:16
+Can't bind to 'ngModel' since it isn't a known property of 'input'. ("bol to get details</h5>
+    <div class="input-group">
+      <input type="text" class="form-control" [ERROR ->][(ngModel)]="searchText" placeholder="symbol" #searchTerm />
+      <div class="input-group-append">
+ "): ng:///DynamicTestModule/BuystocksComponent.html@29:46
+Can't bind to 'ngModel' since it isn't a known property of 'input'. ("tity:</label><input class="form-control" placeholder="How many shares?" type="text" name="quantity" [ERROR ->][(ngModel)]="stockQuantity"/>
+        </div>
+        <div class="modal-footer">
+"): ng:///DynamicTestModule/BuystocksComponent.html@77:141
+    at syntaxError (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:100:17)
+    at TemplateParser.Object.<anonymous>.TemplateParser.parse (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/template_parser/template_parser.ts:106:13)
+    at JitCompiler.Object.<anonymous>.JitCompiler._parseTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:297:33)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:275:11)
+    at /home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:206:42
+    at Set.forEach (<anonymous>)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileComponents (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:206:15)
+    at /home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:117:12
+    at Object.then (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:89:74)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileModuleAndAllComponents (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:115:22)
+    at JitCompiler.Object.<anonymous>.JitCompiler.compileModuleAndAllComponentsSync (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:65:38)
+    at CompilerImpl.Object.<anonymous>.CompilerImpl.compileModuleAndAllComponentsSync (/home/bcuser/Git/isit422-stocks4fun/packages/platform-browser-dynamic/src/compiler_factory.ts:60:35)
+    at TestingCompilerImpl.Object.<anonymous>.TestingCompilerImpl.compileModuleAndAllComponentsSync (/home/bcuser/Git/packages/platform-browser-dynamic/testing/src/compiler_factory.ts:52:27)
+    at TestBed.Object.<anonymous>.TestBed._initIfNeeded (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:349:28)
+    at TestBed.Object.<anonymous>.TestBed.createComponent (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:552:10)
+    at Function.Object.<anonymous>.TestBed.createComponent (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:201:25)
+    at /home/bcuser/Git/isit422-stocks4fun/client/src/app/buystocks/buystocks.component.spec.ts:17:23
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:128:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.run (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:138:43)
+    at Object.testBody.length (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-zone-patch/index.js:50:27)
+    at Object.asyncJestLifecycle (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/jasmine_async.js:63:37)
+    at resolve (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (<anonymous>)
+    at mapper (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at <anonymous>]]></failure>
+      <failure message="Error: expect(received).toBeTruthy()"><![CDATA[Error: expect(received).toBeTruthy()
+
+Received: undefined
+    at /home/bcuser/Git/isit422-stocks4fun/client/src/app/buystocks/buystocks.component.spec.ts:23:23
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:128:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.run (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:138:43)
+    at Object.testBody.length (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-zone-patch/index.js:50:27)
+    at Object.asyncJestTest (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/jasmine_async.js:108:37)
+    at resolve (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (<anonymous>)
+    at mapper (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at <anonymous>]]></failure>
+    </testCase>
+  </file>
+  <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/messages/messages.component.spec.ts">
+    <testCase name="MessagesComponent should create" duration="67"/>
+  </file>
+  <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/sign-up/sign-up.component.spec.ts">
+    <testCase name="SignUpComponent should create" duration="938">
+      <failure message="Error: Template parse errors:"><![CDATA[Error: Template parse errors:
+Can't bind to 'formGroup' since it isn't a known property of 'form'. ("
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <form [ERROR ->][formGroup]="registerForm">
+        <div class="form-group">
+          <label>Email address</label>
+"): ng:///DynamicTestModule/SignUpComponent.html@4:12
+    at syntaxError (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:100:17)
+    at TemplateParser.Object.<anonymous>.TemplateParser.parse (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/template_parser/template_parser.ts:106:13)
+    at JitCompiler.Object.<anonymous>.JitCompiler._parseTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:297:33)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:275:11)
+    at /home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:206:42
+    at Set.forEach (<anonymous>)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileComponents (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:206:15)
+    at /home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:117:12
+    at Object.then (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:89:74)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileModuleAndAllComponents (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:115:22)
+    at JitCompiler.Object.<anonymous>.JitCompiler.compileModuleAndAllComponentsAsync (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:69:33)
+    at CompilerImpl.Object.<anonymous>.CompilerImpl.compileModuleAndAllComponentsAsync (/home/bcuser/Git/isit422-stocks4fun/packages/platform-browser-dynamic/src/compiler_factory.ts:68:27)
+    at TestingCompilerImpl.Object.<anonymous>.TestingCompilerImpl.compileModuleAndAllComponentsAsync (/home/bcuser/Git/packages/platform-browser-dynamic/testing/src/compiler_factory.ts:57:27)
+    at TestBed.Object.<anonymous>.TestBed.compileComponents (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:335:27)
+    at Function.Object.<anonymous>.TestBed.compileComponents (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:116:66)
+    at /home/bcuser/Git/isit422-stocks4fun/client/src/app/sign-up/sign-up.component.spec.ts:13:6
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at AsyncTestZoneSpec.Object.<anonymous>.AsyncTestZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/async-test.js:106:39)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:125:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.runGuarded (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:151:47)
+    at runInTestZone (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/async-test.js:234:29)
+    at /home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/async-test.js:168:17
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:128:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.run (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:138:43)
+    at Object.testBody.length.done (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-zone-patch/index.js:51:29)
+    at resolve (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (<anonymous>)
+    at mapper (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at <anonymous>]]></failure>
+      <failure message="Error: Template parse errors:"><![CDATA[Error: Template parse errors:
+Can't bind to 'formGroup' since it isn't a known property of 'form'. ("
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <form [ERROR ->][formGroup]="registerForm">
+        <div class="form-group">
+          <label>Email address</label>
+"): ng:///DynamicTestModule/SignUpComponent.html@4:12
+    at syntaxError (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:100:17)
+    at TemplateParser.Object.<anonymous>.TemplateParser.parse (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/template_parser/template_parser.ts:106:13)
+    at JitCompiler.Object.<anonymous>.JitCompiler._parseTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:297:33)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:275:11)
+    at /home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:206:42
+    at Set.forEach (<anonymous>)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileComponents (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:206:15)
+    at /home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:117:12
+    at Object.then (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:89:74)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileModuleAndAllComponents (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:115:22)
+    at JitCompiler.Object.<anonymous>.JitCompiler.compileModuleAndAllComponentsSync (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:65:38)
+    at CompilerImpl.Object.<anonymous>.CompilerImpl.compileModuleAndAllComponentsSync (/home/bcuser/Git/isit422-stocks4fun/packages/platform-browser-dynamic/src/compiler_factory.ts:60:35)
+    at TestingCompilerImpl.Object.<anonymous>.TestingCompilerImpl.compileModuleAndAllComponentsSync (/home/bcuser/Git/packages/platform-browser-dynamic/testing/src/compiler_factory.ts:52:27)
+    at TestBed.Object.<anonymous>.TestBed._initIfNeeded (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:349:28)
+    at TestBed.Object.<anonymous>.TestBed.createComponent (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:552:10)
+    at Function.Object.<anonymous>.TestBed.createComponent (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:201:25)
+    at /home/bcuser/Git/isit422-stocks4fun/client/src/app/sign-up/sign-up.component.spec.ts:17:23
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:128:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.run (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:138:43)
+    at Object.testBody.length (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-zone-patch/index.js:50:27)
+    at Object.asyncJestLifecycle (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/jasmine_async.js:63:37)
+    at resolve (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (<anonymous>)
+    at mapper (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at <anonymous>]]></failure>
+      <failure message="Error: expect(received).toBeTruthy()"><![CDATA[Error: expect(received).toBeTruthy()
+
+Received: undefined
+    at /home/bcuser/Git/isit422-stocks4fun/client/src/app/sign-up/sign-up.component.spec.ts:23:23
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:128:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.run (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:138:43)
+    at Object.testBody.length (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-zone-patch/index.js:50:27)
+    at Object.asyncJestTest (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/jasmine_async.js:108:37)
+    at resolve (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (<anonymous>)
+    at mapper (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at <anonymous>]]></failure>
+    </testCase>
+  </file>
+  <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/about/about.component.spec.ts">
+    <testCase name="AboutComponent should create" duration="43"/>
+  </file>
+  <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/login/login.component.spec.ts">
+    <testCase name="LoginComponent should create" duration="969">
+      <failure message="Error: Template parse errors:"><![CDATA[Error: Template parse errors:
+Can't bind to 'formGroup' since it isn't a known property of 'form'. ("
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <form [ERROR ->][formGroup]="loginForm">
+        <div class="form-group">
+          <label>Email address</label>
+"): ng:///DynamicTestModule/LoginComponent.html@4:12
+    at syntaxError (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:100:17)
+    at TemplateParser.Object.<anonymous>.TemplateParser.parse (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/template_parser/template_parser.ts:106:13)
+    at JitCompiler.Object.<anonymous>.JitCompiler._parseTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:297:33)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:275:11)
+    at /home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:206:42
+    at Set.forEach (<anonymous>)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileComponents (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:206:15)
+    at /home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:117:12
+    at Object.then (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:89:74)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileModuleAndAllComponents (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:115:22)
+    at JitCompiler.Object.<anonymous>.JitCompiler.compileModuleAndAllComponentsAsync (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:69:33)
+    at CompilerImpl.Object.<anonymous>.CompilerImpl.compileModuleAndAllComponentsAsync (/home/bcuser/Git/isit422-stocks4fun/packages/platform-browser-dynamic/src/compiler_factory.ts:68:27)
+    at TestingCompilerImpl.Object.<anonymous>.TestingCompilerImpl.compileModuleAndAllComponentsAsync (/home/bcuser/Git/packages/platform-browser-dynamic/testing/src/compiler_factory.ts:57:27)
+    at TestBed.Object.<anonymous>.TestBed.compileComponents (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:335:27)
+    at Function.Object.<anonymous>.TestBed.compileComponents (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:116:66)
+    at /home/bcuser/Git/isit422-stocks4fun/client/src/app/login/login.component.spec.ts:13:6
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at AsyncTestZoneSpec.Object.<anonymous>.AsyncTestZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/async-test.js:106:39)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:125:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.runGuarded (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:151:47)
+    at runInTestZone (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/async-test.js:234:29)
+    at /home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/async-test.js:168:17
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:128:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.run (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:138:43)
+    at Object.testBody.length.done (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-zone-patch/index.js:51:29)
+    at resolve (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (<anonymous>)
+    at mapper (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at <anonymous>]]></failure>
+      <failure message="Error: Template parse errors:"><![CDATA[Error: Template parse errors:
+Can't bind to 'formGroup' since it isn't a known property of 'form'. ("
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <form [ERROR ->][formGroup]="loginForm">
+        <div class="form-group">
+          <label>Email address</label>
+"): ng:///DynamicTestModule/LoginComponent.html@4:12
+    at syntaxError (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:100:17)
+    at TemplateParser.Object.<anonymous>.TemplateParser.parse (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/template_parser/template_parser.ts:106:13)
+    at JitCompiler.Object.<anonymous>.JitCompiler._parseTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:297:33)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:275:11)
+    at /home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:206:42
+    at Set.forEach (<anonymous>)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileComponents (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:206:15)
+    at /home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:117:12
+    at Object.then (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:89:74)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileModuleAndAllComponents (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:115:22)
+    at JitCompiler.Object.<anonymous>.JitCompiler.compileModuleAndAllComponentsSync (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:65:38)
+    at CompilerImpl.Object.<anonymous>.CompilerImpl.compileModuleAndAllComponentsSync (/home/bcuser/Git/isit422-stocks4fun/packages/platform-browser-dynamic/src/compiler_factory.ts:60:35)
+    at TestingCompilerImpl.Object.<anonymous>.TestingCompilerImpl.compileModuleAndAllComponentsSync (/home/bcuser/Git/packages/platform-browser-dynamic/testing/src/compiler_factory.ts:52:27)
+    at TestBed.Object.<anonymous>.TestBed._initIfNeeded (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:349:28)
+    at TestBed.Object.<anonymous>.TestBed.createComponent (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:552:10)
+    at Function.Object.<anonymous>.TestBed.createComponent (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:201:25)
+    at /home/bcuser/Git/isit422-stocks4fun/client/src/app/login/login.component.spec.ts:17:23
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:128:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.run (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:138:43)
+    at Object.testBody.length (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-zone-patch/index.js:50:27)
+    at Object.asyncJestLifecycle (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/jasmine_async.js:63:37)
+    at resolve (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (<anonymous>)
+    at mapper (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at <anonymous>]]></failure>
+      <failure message="Error: expect(received).toBeTruthy()"><![CDATA[Error: expect(received).toBeTruthy()
+
+Received: undefined
+    at /home/bcuser/Git/isit422-stocks4fun/client/src/app/login/login.component.spec.ts:23:23
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:128:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.run (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:138:43)
+    at Object.testBody.length (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-zone-patch/index.js:50:27)
+    at Object.asyncJestTest (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/jasmine_async.js:108:37)
+    at resolve (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (<anonymous>)
+    at mapper (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at <anonymous>]]></failure>
+    </testCase>
+  </file>
+  <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/user/user.component.spec.ts">
+    <testCase name="UserComponent should create" duration="3252">
+      <failure message="Error: Template parse errors:"><![CDATA[Error: Template parse errors:
+Can't bind to 'formGroup' since it isn't a known property of 'form'. ("
+        </div>
+        <div *ngIf='user.provider == "password"' class="card-body">
+          <form [ERROR ->][formGroup]="profileForm">
+            <div class="form-group">
+              <label>Your name</label"): ng:///DynamicTestModule/UserComponent.html@11:16
+Can't bind to 'ngModel' since it isn't a known property of 'input'. ("tity:</label><input class="form-control" placeholder="How many shares?" type="text" name="quantity" [ERROR ->][(ngModel)]="stockQuantity"/>
+        </div>
+        <div class="modal-footer">
+"): ng:///DynamicTestModule/UserComponent.html@68:141
+    at syntaxError (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:100:17)
+    at TemplateParser.Object.<anonymous>.TemplateParser.parse (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/template_parser/template_parser.ts:106:13)
+    at JitCompiler.Object.<anonymous>.JitCompiler._parseTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:297:33)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:275:11)
+    at /home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:206:42
+    at Set.forEach (<anonymous>)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileComponents (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:206:15)
+    at /home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:117:12
+    at Object.then (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:89:74)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileModuleAndAllComponents (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:115:22)
+    at JitCompiler.Object.<anonymous>.JitCompiler.compileModuleAndAllComponentsAsync (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:69:33)
+    at CompilerImpl.Object.<anonymous>.CompilerImpl.compileModuleAndAllComponentsAsync (/home/bcuser/Git/isit422-stocks4fun/packages/platform-browser-dynamic/src/compiler_factory.ts:68:27)
+    at TestingCompilerImpl.Object.<anonymous>.TestingCompilerImpl.compileModuleAndAllComponentsAsync (/home/bcuser/Git/packages/platform-browser-dynamic/testing/src/compiler_factory.ts:57:27)
+    at TestBed.Object.<anonymous>.TestBed.compileComponents (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:335:27)
+    at Function.Object.<anonymous>.TestBed.compileComponents (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:116:66)
+    at /home/bcuser/Git/isit422-stocks4fun/client/src/app/user/user.component.spec.ts:13:6
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at AsyncTestZoneSpec.Object.<anonymous>.AsyncTestZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/async-test.js:106:39)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:125:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.runGuarded (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:151:47)
+    at runInTestZone (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/async-test.js:234:29)
+    at /home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/async-test.js:168:17
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:128:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.run (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:138:43)
+    at Object.testBody.length.done (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-zone-patch/index.js:51:29)
+    at resolve (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (<anonymous>)
+    at mapper (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at <anonymous>]]></failure>
+      <failure message="Error: Template parse errors:"><![CDATA[Error: Template parse errors:
+Can't bind to 'formGroup' since it isn't a known property of 'form'. ("
+        </div>
+        <div *ngIf='user.provider == "password"' class="card-body">
+          <form [ERROR ->][formGroup]="profileForm">
+            <div class="form-group">
+              <label>Your name</label"): ng:///DynamicTestModule/UserComponent.html@11:16
+Can't bind to 'ngModel' since it isn't a known property of 'input'. ("tity:</label><input class="form-control" placeholder="How many shares?" type="text" name="quantity" [ERROR ->][(ngModel)]="stockQuantity"/>
+        </div>
+        <div class="modal-footer">
+"): ng:///DynamicTestModule/UserComponent.html@68:141
+    at syntaxError (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:100:17)
+    at TemplateParser.Object.<anonymous>.TemplateParser.parse (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/template_parser/template_parser.ts:106:13)
+    at JitCompiler.Object.<anonymous>.JitCompiler._parseTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:297:33)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:275:11)
+    at /home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:206:42
+    at Set.forEach (<anonymous>)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileComponents (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:206:15)
+    at /home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:117:12
+    at Object.then (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:89:74)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileModuleAndAllComponents (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:115:22)
+    at JitCompiler.Object.<anonymous>.JitCompiler.compileModuleAndAllComponentsSync (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:65:38)
+    at CompilerImpl.Object.<anonymous>.CompilerImpl.compileModuleAndAllComponentsSync (/home/bcuser/Git/isit422-stocks4fun/packages/platform-browser-dynamic/src/compiler_factory.ts:60:35)
+    at TestingCompilerImpl.Object.<anonymous>.TestingCompilerImpl.compileModuleAndAllComponentsSync (/home/bcuser/Git/packages/platform-browser-dynamic/testing/src/compiler_factory.ts:52:27)
+    at TestBed.Object.<anonymous>.TestBed._initIfNeeded (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:349:28)
+    at TestBed.Object.<anonymous>.TestBed.createComponent (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:552:10)
+    at Function.Object.<anonymous>.TestBed.createComponent (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:201:25)
+    at /home/bcuser/Git/isit422-stocks4fun/client/src/app/user/user.component.spec.ts:17:23
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:128:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.run (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:138:43)
+    at Object.testBody.length (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-zone-patch/index.js:50:27)
+    at Object.asyncJestLifecycle (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/jasmine_async.js:63:37)
+    at resolve (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (<anonymous>)
+    at mapper (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at <anonymous>]]></failure>
+      <failure message="Error: expect(received).toBeTruthy()"><![CDATA[Error: expect(received).toBeTruthy()
+
+Received: undefined
+    at /home/bcuser/Git/isit422-stocks4fun/client/src/app/user/user.component.spec.ts:23:23
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:128:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.run (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:138:43)
+    at Object.testBody.length (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-zone-patch/index.js:50:27)
+    at Object.asyncJestTest (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/jasmine_async.js:108:37)
+    at resolve (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (<anonymous>)
+    at mapper (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at <anonymous>]]></failure>
+    </testCase>
+  </file>
+  <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/crud/crud.component.spec.ts">
+    <testCase name="CrudComponent should create" duration="2308">
+      <failure message="Error: Template parse errors:"><![CDATA[Error: Template parse errors:
+Can't bind to 'ngModel' since it isn't a known property of 'input'. ("
+        <div>
+            <label>First Name:
+                <input [ERROR ->][(ngModel)]="selectedUserItem.firstname">
+            </label><br />
+            <label>Last Name:
+"): ng:///DynamicTestModule/CrudComponent.html@14:23
+Can't bind to 'ngModel' since it isn't a known property of 'input'. ("
+            </label><br />
+            <label>Last Name:
+                <input [ERROR ->][(ngModel)]="selectedUserItem.lastname">
+            </label><br />
+            <label>Username:
+"): ng:///DynamicTestModule/CrudComponent.html@17:23
+Can't bind to 'ngModel' since it isn't a known property of 'input'. ("
+            </label><br />
+            <label>Username:
+                <input [ERROR ->][(ngModel)]="selectedUserItem.username">
+            </label>
+            <br />
+"): ng:///DynamicTestModule/CrudComponent.html@20:23
+Can't bind to 'ngModel' since it isn't a known property of 'input'. ("
+            <br />
+            <label>Password:
+                <input [ERROR ->][(ngModel)]="selectedUserItem.password">
+            </label>
+            <br />
+"): ng:///DynamicTestModule/CrudComponent.html@24:23
+Can't bind to 'ngModel' since it isn't a known property of 'input'. ("
+            <br />
+            <label>_id:
+                <input [ERROR ->][(ngModel)]="selectedUserItem._id">
+            </label><br />
+            <button (click)="deleteUse"): ng:///DynamicTestModule/CrudComponent.html@28:23
+    at syntaxError (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:100:17)
+    at TemplateParser.Object.<anonymous>.TemplateParser.parse (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/template_parser/template_parser.ts:106:13)
+    at JitCompiler.Object.<anonymous>.JitCompiler._parseTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:297:33)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:275:11)
+    at /home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:206:42
+    at Set.forEach (<anonymous>)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileComponents (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:206:15)
+    at /home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:117:12
+    at Object.then (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:89:74)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileModuleAndAllComponents (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:115:22)
+    at JitCompiler.Object.<anonymous>.JitCompiler.compileModuleAndAllComponentsAsync (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:69:33)
+    at CompilerImpl.Object.<anonymous>.CompilerImpl.compileModuleAndAllComponentsAsync (/home/bcuser/Git/isit422-stocks4fun/packages/platform-browser-dynamic/src/compiler_factory.ts:68:27)
+    at TestingCompilerImpl.Object.<anonymous>.TestingCompilerImpl.compileModuleAndAllComponentsAsync (/home/bcuser/Git/packages/platform-browser-dynamic/testing/src/compiler_factory.ts:57:27)
+    at TestBed.Object.<anonymous>.TestBed.compileComponents (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:335:27)
+    at Function.Object.<anonymous>.TestBed.compileComponents (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:116:66)
+    at /home/bcuser/Git/isit422-stocks4fun/client/src/app/crud/crud.component.spec.ts:13:6
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at AsyncTestZoneSpec.Object.<anonymous>.AsyncTestZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/async-test.js:106:39)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:125:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.runGuarded (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:151:47)
+    at runInTestZone (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/async-test.js:234:29)
+    at /home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/async-test.js:168:17
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:128:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.run (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:138:43)
+    at Object.testBody.length.done (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-zone-patch/index.js:51:29)
+    at resolve (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (<anonymous>)
+    at mapper (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at <anonymous>]]></failure>
+      <failure message="Error: Template parse errors:"><![CDATA[Error: Template parse errors:
+Can't bind to 'ngModel' since it isn't a known property of 'input'. ("
+        <div>
+            <label>First Name:
+                <input [ERROR ->][(ngModel)]="selectedUserItem.firstname">
+            </label><br />
+            <label>Last Name:
+"): ng:///DynamicTestModule/CrudComponent.html@14:23
+Can't bind to 'ngModel' since it isn't a known property of 'input'. ("
+            </label><br />
+            <label>Last Name:
+                <input [ERROR ->][(ngModel)]="selectedUserItem.lastname">
+            </label><br />
+            <label>Username:
+"): ng:///DynamicTestModule/CrudComponent.html@17:23
+Can't bind to 'ngModel' since it isn't a known property of 'input'. ("
+            </label><br />
+            <label>Username:
+                <input [ERROR ->][(ngModel)]="selectedUserItem.username">
+            </label>
+            <br />
+"): ng:///DynamicTestModule/CrudComponent.html@20:23
+Can't bind to 'ngModel' since it isn't a known property of 'input'. ("
+            <br />
+            <label>Password:
+                <input [ERROR ->][(ngModel)]="selectedUserItem.password">
+            </label>
+            <br />
+"): ng:///DynamicTestModule/CrudComponent.html@24:23
+Can't bind to 'ngModel' since it isn't a known property of 'input'. ("
+            <br />
+            <label>_id:
+                <input [ERROR ->][(ngModel)]="selectedUserItem._id">
+            </label><br />
+            <button (click)="deleteUse"): ng:///DynamicTestModule/CrudComponent.html@28:23
+    at syntaxError (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:100:17)
+    at TemplateParser.Object.<anonymous>.TemplateParser.parse (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/template_parser/template_parser.ts:106:13)
+    at JitCompiler.Object.<anonymous>.JitCompiler._parseTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:297:33)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileTemplate (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:275:11)
+    at /home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:206:42
+    at Set.forEach (<anonymous>)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileComponents (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:206:15)
+    at /home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:117:12
+    at Object.then (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/util.ts:89:74)
+    at JitCompiler.Object.<anonymous>.JitCompiler._compileModuleAndAllComponents (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:115:22)
+    at JitCompiler.Object.<anonymous>.JitCompiler.compileModuleAndAllComponentsSync (/home/bcuser/Git/isit422-stocks4fun/packages/compiler/src/jit/compiler.ts:65:38)
+    at CompilerImpl.Object.<anonymous>.CompilerImpl.compileModuleAndAllComponentsSync (/home/bcuser/Git/isit422-stocks4fun/packages/platform-browser-dynamic/src/compiler_factory.ts:60:35)
+    at TestingCompilerImpl.Object.<anonymous>.TestingCompilerImpl.compileModuleAndAllComponentsSync (/home/bcuser/Git/packages/platform-browser-dynamic/testing/src/compiler_factory.ts:52:27)
+    at TestBed.Object.<anonymous>.TestBed._initIfNeeded (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:349:28)
+    at TestBed.Object.<anonymous>.TestBed.createComponent (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:552:10)
+    at Function.Object.<anonymous>.TestBed.createComponent (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:201:25)
+    at /home/bcuser/Git/isit422-stocks4fun/client/src/app/crud/crud.component.spec.ts:17:23
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:128:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.run (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:138:43)
+    at Object.testBody.length (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-zone-patch/index.js:50:27)
+    at Object.asyncJestLifecycle (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/jasmine_async.js:63:37)
+    at resolve (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (<anonymous>)
+    at mapper (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at <anonymous>]]></failure>
+      <failure message="Error: expect(received).toBeTruthy()"><![CDATA[Error: expect(received).toBeTruthy()
+
+Received: undefined
+    at /home/bcuser/Git/isit422-stocks4fun/client/src/app/crud/crud.component.spec.ts:23:23
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:128:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.run (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:138:43)
+    at Object.testBody.length (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-zone-patch/index.js:50:27)
+    at Object.asyncJestTest (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/jasmine_async.js:108:37)
+    at resolve (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (<anonymous>)
+    at mapper (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at <anonymous>]]></failure>
+    </testCase>
+  </file>
+  <file path="/home/bcuser/Git/isit422-stocks4fun/client/src/app/crud-service.service.spec.ts">
+    <testCase name="CrudService should be created" duration="927">
+      <failure message="Error: StaticInjectorError(DynamicTestModule)[HttpClient]: "><![CDATA[Error: StaticInjectorError(DynamicTestModule)[HttpClient]: 
+  StaticInjectorError(Platform: core)[HttpClient]: 
+    NullInjectorError: No provider for HttpClient!
+    at NullInjector.Object.<anonymous>.NullInjector.get (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:39:13)
+    at resolveToken (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:334:20)
+    at tryResolveToken (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:276:12)
+    at StaticInjector.Object.<anonymous>.StaticInjector.get (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:156:14)
+    at resolveToken (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:334:20)
+    at tryResolveToken (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:276:12)
+    at StaticInjector.Object.<anonymous>.StaticInjector.get (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:156:14)
+    at resolveNgModuleDep (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/ng_module.ts:124:25)
+    at NgModuleRef_.Object.<anonymous>.NgModuleRef_.get (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/refs.ts:505:12)
+    at inject (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:473:29)
+    at injectArgs (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injector.ts:503:17)
+    at /home/bcuser/Git/isit422-stocks4fun/packages/core/src/di/injectable.ts:98:30
+    at _callFactory (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/ng_module.ts:193:14)
+    at _createProviderInstance (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/ng_module.ts:146:20)
+    at resolveNgModuleDep (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/ng_module.ts:120:15)
+    at NgModuleRef_.Object.<anonymous>.NgModuleRef_.get (/home/bcuser/Git/isit422-stocks4fun/packages/core/src/view/refs.ts:505:12)
+    at TestBed.Object.<anonymous>.TestBed.get (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:437:45)
+    at Function.Object.<anonymous>.TestBed.get (/home/bcuser/Git/packages/core/testing/src/test_bed.ts:197:25)
+    at /home/bcuser/Git/isit422-stocks4fun/client/src/app/crud-service.service.spec.ts:8:42
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:388:26)
+    at ProxyZoneSpec.Object.<anonymous>.ProxyZoneSpec.onInvoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/proxy.js:128:39)
+    at ZoneDelegate.Object.<anonymous>.ZoneDelegate.invoke (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:387:32)
+    at Zone.Object.<anonymous>.Zone.run (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/zone.js/dist/zone.js:138:43)
+    at Object.testBody.length (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-zone-patch/index.js:50:27)
+    at Object.asyncJestTest (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/jasmine_async.js:108:37)
+    at resolve (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:56:12)
+    at new Promise (<anonymous>)
+    at mapper (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:43:19)
+    at promise.then (/home/bcuser/Git/isit422-stocks4fun/client/node_modules/jest-jasmine2/build/queue_runner.js:87:41)
+    at <anonymous>]]></failure>
+    </testCase>
+  </file>
+</testExecutions>
