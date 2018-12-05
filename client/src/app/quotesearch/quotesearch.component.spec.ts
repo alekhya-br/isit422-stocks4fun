@@ -1,17 +1,15 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { FormsModule } from '@angular/forms'; 
+import { HttpClientModule }    from '@angular/common/http';
 import { QuotesearchComponent } from './quotesearch.component';
-import {Component, DebugElement} from "@angular/core";
-
-import {By} from "@angular/platform-browser";
 
 describe('QuotesearchComponent', () => {
   let component: QuotesearchComponent;
   let fixture: ComponentFixture<QuotesearchComponent>;
-  let inputElement: DebugElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ FormsModule, HttpClientModule ],
       declarations: [ QuotesearchComponent ]
     })
     .compileComponents();
@@ -26,7 +24,9 @@ describe('QuotesearchComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  
-});
 
+  it('should call getStock',() => {
+    result=> expect(component.getStock).toHaveBeenCalledWith('TSLA');
+  });
+});
 

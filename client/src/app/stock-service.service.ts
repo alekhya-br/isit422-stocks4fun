@@ -6,6 +6,7 @@ import { StockDataItem } from './StockDataItem';
 import { MessageService } from './message.service';
 import { catchError, map, tap } from 'rxjs/operators';
 import * as Moment from 'moment';
+import { HttpModule } from '@angular/http';
 
 @Injectable({ providedIn: 'root' })
 export class StockService {

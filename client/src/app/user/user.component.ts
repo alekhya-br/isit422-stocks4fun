@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../core/user.service';
 import { AuthService } from '../core/auth.service';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
@@ -17,6 +16,7 @@ export class UserComponent implements OnInit {
 
   theOrders: OrderItem[];
 
+  orderID = 0;
   stockSymbol = 'unknown';
   stockName = 'unknown';
   stockPrice = 0.0;
@@ -26,16 +26,17 @@ export class UserComponent implements OnInit {
   user: FirebaseUserModel = new FirebaseUserModel();
   profileForm: FormGroup;
 
-  setModalFields(stockSymbol, stockName, stockPrice) {
+  setModalFields(orderID, stockSymbol, stockName, stockQuantity, stockPrice) {
+    this.orderID = orderID;
     this.stockSymbol = stockSymbol;
     this.stockName = stockName;
+    this.stockQuantity = stockQuantity;
     this.stockPrice = stockPrice;
     console.log('setModalFields called');
   }
 
   constructor(
     private myCrudService: CrudService,
-    public userService: UserService,
     public authService: AuthService,
     private route: ActivatedRoute,
     private location: Location,
@@ -55,13 +56,44 @@ export class UserComponent implements OnInit {
     this.getOrders();
   }
 
-  sellStock() {
-
-    this.stockName = 'unknown';
-    this.stockSymbol = 'unknown';
-    this.stockPrice = 0.0;
-    this.stockQuantity = 0;
-    alert("Successfully sold stocks.");
+  sellStock(sellQuantity: number) {
+    if(sellQuantity > 0) {
+      if(sellQuantity < this.stockQuantity) {
+        var updateItem: OrderItem = { _id: Object, user_uid: this.user.uid, stock_symbol: this.stockSymbol, stock_name: this.stockName, stock_price: this.stockPrice, stock_quantity: this.stockQuantity - sellQuantity };
+        this.myCrudService.updateOrder(this.orderID, updateItem)
+          .subscribe(
+            // nothing to do
+          );
+        //for (pointer; pointer >= 0; pointer--) {
+        //  if (this.theOrders[pointer]._id === this.orderID as Number) {
+        //    this.theOrders[pointer].stock_quantity = this.stockQuantity - sellQuantity;
+        //  }
+        //};
+        this.orderID = 0;
+        this.stockName = 'unknown';
+        this.stockSymbol = 'unknown';
+        this.stockPrice = 0.0;
+        this.stockQuantity = 0;
+        alert("Successfully sold " + sellQuantity + " stocks.");
+        window.location.reload();
+      }
+      else {
+        //delete db entry
+        this.myCrudService.deleteOrder(this.orderID) // it is a base 16 number
+          .subscribe();
+        // update local data
+        var pointer = this.theOrders.length - 1;
+        for (pointer; pointer >= 0; pointer--) {
+          if (this.theOrders[pointer]._id === this.orderID as Number) {
+            this.theOrders.splice(pointer, 1);
+          }
+        };
+        alert("Successfully sold " + this.stockQuantity + " stocks.");
+      }
+    }
+    else {
+      alert("No stocks sold.");
+    }
   }
 
   getOrders(): void {
@@ -78,13 +110,6 @@ export class UserComponent implements OnInit {
     this.profileForm = this.fb.group({
       name: [name, Validators.required]
     });
-  }
-
-  save(value) {
-    this.userService.updateCurrentUser(value)
-      .then(res => {
-        console.log(res);
-      }, err => console.log(err))
   }
 
 }

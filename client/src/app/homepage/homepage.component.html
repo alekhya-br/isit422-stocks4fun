@@ -2,18 +2,20 @@
   <h2>Market Stocks</h2>
   <div *ngIf="apiMarketData" class="table-responsive">
     <table class="table table-striped col-xs-12">
+      <thead>
+        <tr >
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th *ngIf="showChange">Change</th>
+          </tr>
+      </thead>
       <tbody>
-        <tr>
-          <th>Symbol</th>
-          <th>Name</th>
-          <th>Price</th>
-          <th *ngIf="showChange">% Change</th>
-        </tr>
         <tr id="testMarket" *ngFor="let eachMarket of apiMarketData">
-          <th>{{eachMarket.symbol}}</th>
-          <th>{{eachMarket.name}}</th>
-          <th>{{eachMarket.price}}</th>
-          <th *ngIf="showChange">{{eachMarket.change_pct}}</th>
+          <td>{{eachMarket.symbol}}</td>
+          <td>{{eachMarket.name}}</td>
+          <td>${{eachMarket.price}}</td>
+          <td *ngIf="showChange">{{eachMarket.change_pct}}</td>
         </tr>
       </tbody>
     </table>
@@ -24,18 +26,20 @@
   <h2>Top Dow Jones Dividend Stocks</h2>
   <div *ngIf="dowJonesStocks" class="table-responsive">
     <table class="table table-striped col-xs-12">
+      <thead>
+        <tr >
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th *ngIf="showChange">Change</th>
+          </tr>
+      </thead>
       <tbody>
-        <tr>
-          <th>Symbol</th>
-          <th>Name</th>
-          <th>Price</th>
-          <th *ngIf="showChange">% Change</th>
-        </tr>
         <tr *ngFor="let eachStock of dowJonesStocks">
-          <th>{{eachStock.symbol}}</th>
-          <th>{{eachStock.name}}</th>
-          <th>{{eachStock.price}}</th>
-          <th *ngIf="showChange">{{eachStock.change_pct}}</th>
+          <td>{{eachStock.symbol}}</td>
+          <td>{{eachStock.name}}</td>
+          <td>${{eachStock.price}}</td>
+          <td *ngIf="showChange">{{eachStock.change_pct}}</td>
         </tr>
       </tbody>
     </table>
@@ -46,18 +50,20 @@
   <h2>Top S&P 500 Dividend Stocks</h2>
   <div *ngIf="sp500Stocks" class="table-responsive">
     <table class="table table-striped col-xs-12">
+      <thead>
+        <tr >
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th *ngIf="showChange">Change</th>
+          </tr>
+      </thead>
       <tbody>
-        <tr>
-          <th>Symbol</th>
-          <th>Name</th>
-          <th>Price</th>
-          <th *ngIf="showChange">% Change</th>
-        </tr>
         <tr *ngFor="let eachStock of sp500Stocks">
-          <th>{{eachStock.symbol}}</th>
-          <th>{{eachStock.name}}</th>
-          <th>{{eachStock.price}}</th>
-          <th *ngIf="showChange">{{eachStock.change_pct}}</th>
+          <td>{{eachStock.symbol}}</td>
+          <td>{{eachStock.name}}</td>
+          <td>${{eachStock.price}}</td>
+          <td *ngIf="showChange">{{eachStock.change_pct}}</td>
         </tr>
       </tbody>
     </table>
@@ -68,18 +74,20 @@
   <h2>Top Nasdaq Dividend Stocks</h2>
   <div *ngIf="nasdaqStocks" class="table-responsive">
     <table class="table table-striped col-xs-12">
+      <thead>
+        <tr >
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th *ngIf="showChange">Change</th>
+          </tr>
+      </thead>
       <tbody>
-        <tr>
-          <th>Symbol</th>
-          <th>Name</th>
-          <th>Price</th>
-          <th *ngIf="showChange">% Change</th>
-        </tr>
         <tr *ngFor="let eachStock of nasdaqStocks">
-          <th>{{eachStock.symbol}}</th>
-          <th>{{eachStock.name}}</th>
-          <th>{{eachStock.price}}</th>
-          <th *ngIf="showChange">{{eachStock.change_pct}}</th>
+          <td>{{eachStock.symbol}}</td>
+          <td>{{eachStock.name}}</td>
+          <td>${{eachStock.price}}</td>
+          <td *ngIf="showChange">{{eachStock.change_pct}}</td>
         </tr>
       </tbody>
     </table>
