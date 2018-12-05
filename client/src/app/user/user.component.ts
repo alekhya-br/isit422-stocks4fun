@@ -88,6 +88,7 @@ export class UserComponent implements OnInit {
             this.theOrders.splice(pointer, 1);
           }
         };
+        alert("Successfully sold " + this.stockQuantity + " stocks.");
       }
     }
     else {
